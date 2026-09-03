@@ -33,7 +33,7 @@ trabajados durante la materia.
 (con nombre completo, todos los alumnos forman parte de la COMISIÓN 9 TURNO NOCHE)
    * ALUMNO 1
    * Lucas Garcia
-   * ALUMNO 3
+   * Cabral Ludmila
    * Nicolas Federico Benialgo
 
 
