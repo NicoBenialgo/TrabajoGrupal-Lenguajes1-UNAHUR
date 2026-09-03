@@ -32,7 +32,7 @@ trabajados durante la materia.
 # Conformación de grupos
 (con nombre completo, todos los alumnos forman parte de la COMISIÓN 9 TURNO NOCHE)
    * ALUMNO 1
-   * ALUMNO 2
+   * Lucas Garcia
    * ALUMNO 3
    * Nicolas Federico Benialgo
 
