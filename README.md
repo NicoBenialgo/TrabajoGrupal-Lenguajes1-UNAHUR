@@ -1,69 +1,124 @@
-*Estado de trabajo: EN PROCESO.*
-
-*Fecha de finalización: CLASE 15 (18 de noviembre de 2026)*
-
 <p align="center">
     <img height="256px" src="https://raw.githubusercontent.com/NicoBenialgo/TrabajoGrupal-Lenguajes1-UNAHUR/refs/heads/main/portadaTPG-Lenguajes1.png" alt="Trabajo Práctico Grupal // Lenguajes Informáticos 1 (UNAHUR)" />
 </p>
 
-<h1 align="center">Descripción general</h1>
+# Trabajo Práctico Grupal
 
-El trabajo práctico consiste en desarrollar un sitio web de información y promoción de una ciudad
-ficticia.
+El siguiente repositorio corresponde a la materia **Lenguajes Informáticos 1** del área de Tecnología e Ingeniería de la **Universidad Nacional de Hurlingham**, la cuál corresponde a poner en práctica todo el contenido visto durante el cuatrimestre. Para ello haremos un grupo con 4 personas para desarrollar un sitio web de información y promoción de una ciudad ficticia.
 
-Cada equipo deberá crear la identidad de la ciudad, incluyendo su nombre, características
-principales, lugares de interés, propuestas culturales, actividades y eventos. El contenido puede
-ser completamente inventado, siempre que mantenga coherencia dentro del sitio.
+Cada equipo deberá crear la identidad de la ciudad, incluyendo su nombre, características principales, lugares de interés, propuestas culturales, actividades y eventos. El contenido puede ser completamente inventado, siempre que mantenga coherencia dentro del sitio.
 
-El sitio se construirá de forma incremental a lo largo del cuatrimestre, incorporando las
-tecnologías que se vayan trabajando en clase: primero se desarrollará la estructura y el contenido
-utilizando HTML, luego se incorporarán estilos mediante CSS, posteriormente se mejorará el
-diseño y la adaptación a distintos dispositivos utilizando Bootstrap, y finalmente se agregarán
-funcionalidades e interacciones mediante JavaScript.
+El sitio se construirá de forma incremental a lo largo del cuatrimestre, incorporando las tecnologías que se vayan trabajando en clase: **primero se desarrollará la estructura y el contenido utilizando HTML, luego se incorporarán estilos mediante CSS**, posteriormente se mejorará el diseño y la adaptación a distintos dispositivos utilizando Bootstrap, y finalmente se agregarán funcionalidades e interacciones mediante JavaScript.
 
-Cada etapa deberá construirse sobre la anterior, de manera que el proyecto evolucione
-progresivamente hasta obtener un sitio web completo, navegable, adaptable e interactivo.
-El objetivo del trabajo no es solamente obtener un sitio terminado, sino también poner en
-práctica el proceso de desarrollo colaborativo: organizar las tareas, distribuir el trabajo entre los
-integrantes, utilizar Git y GitHub para registrar los avances y aplicar progresivamente los conceptos
-trabajados durante la materia.
+Cada etapa deberá construirse sobre la anterior, de manera que el proyecto evolucione progresivamente hasta obtener un sitio web completo, navegable, adaptable e interactivo. El objetivo del trabajo no es solamente obtener un sitio terminado, sino también poner en práctica el proceso de desarrollo colaborativo: organizar las tareas, distribuir el trabajo entre los integrantes, utilizar Git y GitHub para registrar los avances y aplicar progresivamente los conceptos trabajados durante la materia.
 
+# Organización del proyecto
 
-# Conformación de grupos
-(con nombre completo, todos los alumnos forman parte de la COMISIÓN 9 TURNO NOCHE)
-   * Emanuel Santiago Alonso
-   * Lucas Garcia
-   * Cabral Ludmila
-   * Nicolas Federico Benialgo
+StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
 
+## Alumnos que conforman el grupo
 
-Commit  | Clase      | Etapa             | Contenido esperado
+El siguiente grupo de alumnos forman parte de la **Comisión 9** de la materia de **Lenguajes Informáticos 1**, cuya cursada se realiza los jueves de 18 a 22 horas.
+
+ - Lucas García
+ - Ludmila Cabral
+ - Nicolas Federico Benialgo
+ - Emanuel Santiago Alonso
+
+## Calendario de commits obligatorios
+
+Commit  | Fecha de entrega      | Etapa             | Contenido esperado
 ------: | :--------: | :---------------: | :------------------------------------------------------------------
-C1      | Clase 8    | Estructura HTML   | index.html + páginas secundarias con HTML semántico completo.
-C2      | Clase 8    | Estilos CSS       | Hoja de estilos vinculada. Layout, colores y tipografía aplicados.
-C3      | Clase 12   | Framework CSS     | Grilla responsiva y componentes de Bootstrap integrados.
-C4      | Clase 15   | JavaScript        | Al menos una interacción dinámica funcionando en el sitio.
+C1 (CLASE 5)      | 13 de septiembre    | Estructura HTML   | index.html + páginas secundarias con HTML semántico completo.
+C2 (CLASE 8)     | 4 de octubre    | Estilos CSS       | Hoja de estilos vinculada. Layout, colores y tipografía aplicados.
+C3 (CLASE 12)     | Clase 12   | Framework CSS     | Grilla responsiva y componentes de Bootstrap integrados.
+C4 (CLASE 15)     | Clase 15   | JavaScript        | Al menos una interacción dinámica funcionando en el sitio.
 
-# Resumen de criterios de evaluación
-Se busca para la entrega del primer commit la participación de la totalidad de los participantes del grupo listado en la "Conformación de grupos", con una edición registrada en un commit dentro de este repositorio de GitHub. En esta **ETAPA 1** se espera que el repositorio contenga la estructura básica de los archivos en HTML, que debe contener como mínimo estas 5 páginas:
-  * La página creada `index.html`
-  * La página creada `ciudad.html`
-  * La página creada `lugares.html`
-  * La página creada `contacto.html`
+## Estado actual del repositorio
 
-Todas estas páginas deben tener el siguiente contenido dentro:
-  * Declaración **DOCTYPE** y elemento `<html lang="es">` en todas las páginas.
-  * `<head>` completo: **charset UTF-8**, viewport, title descriptivo y único por página.
-  * Estructura semántica obligatoria: `<header>`, `<nav>`, `<main>` y `<footer>` en todas las páginas.
-  * El `<nav>` debe contener los enlaces de navegación entre páginas (usando rutas relativas).
-  * Usar `<section>`, `<article>` y `<aside>` donde corresponda semánticamente.
-  * Los headings deben respetar la jerarquía: un solo `<h1>` por página, seguido de `<h2>`, `<h3>`, etc.
+Actualmente se encuentra en preparación el **segundo commit (C2)**. Los pasos a seguir para continuar con el trabajo práctico grupal son los siguientes:
 
-Criterio                                                       | Peso en la evaluación   
--------------------------------------------------------------: | :------------------------------------------------------------------
-Participación individual (commits propios en todas las etapas) | Condición necesaria para presentarse
-Cumplimiento de los requisitos técnicos de cada etapa          | Alto
-Uso correcto y semántico de las etiquetas y tecnologías        | Alto
-Calidad del trabajo en equipo y distribución del trabajo       | Alto
-Capacidad de explicar el código propio durante la defensa      | Alto
-Mensajes de commit descriptivos y buenas prácticas de Git      | Medio
+ 1. Crear la vinculación del `index.html` a la hoja de estilos que se creará en un nuevo archivo llamado `estilos.css` mediante la etiqueta `<link rel=stylesheet href=css/estilos.css>`. 
+ 2. Subir de forma individual al repositorio el esquema básico CSS modelizado, siguiendo el ejemplo usado en la CLASE 6 para el mini-desafío de ConnectHub, declarando cuáles serán los colores principales a usar mediante variables `--var(nombre-variable)`, el cuál primero deben declararse en el desglose de código en el selector`:root` ubicado al principio de la hoja de `estilos.css`, así como la fuente general de todo el texto el cuál debe estar previamente importado en la sección `head` del `index.html`. 
+ 3. Agregarle a esto el modelo de reset básico para modelizar todo el contenido html bajo el selector `* {...}` y el modelado del selector `body`, lo cuál quedaría de esta forma:
+
+`/* Acá se definen los colores principales para su uso en el sitio web */`
+
+`/* ESTOS NO SON LOS COLORES REALES PARA EL PROYECTO, la fuente tampoco */`
+
+`:root {`
+
+`--color-texto: #FFFFFF;`
+
+`--color-fondo: #000000;`
+
+`--color-primario: #333333;`
+
+`--color-secundario: #d33d4e;`
+
+`--fuente: "OpenSans", sans-serif;`
+
+`}`
+
+`/* Reset básico */`
+
+`* { `
+
+    `box-sizing: border-box;`
+	
+    `margin: 0; padding: 0;`
+
+`}`
+
+`body {`
+
+    `font-family: var(--fuente);`
+	
+    `font-size: 16px;`
+	
+    `color: var(--color-texto);`
+	
+    `max-width: 1100px;`
+	
+    `margin: 0 auto;`
+	
+    `padding: 0 1rem;`
+
+`}`
+}
+
+ 4. Cada uno de los integrantes debe realizar en el momento acordado en conjunto la instalación de la aplicacion GIT a su computadora personal, instalando sin realizar modificaciones a las sugerencias mostradas más allá de apretar "Siguiente" o "Next". Con GIT instalado, usar su variante llamado **Git Bash**, el cuál se abrirá una ventana negra tipo Terminal cuya primer línea dirá los nombres con los que se identifica a su PC personal. **Cada miembro del equipo tendrá que escribir las siguientes líneas de código en Git Bash** ni bien lo hayan instalado:
+ 
+		`git config --global user.name "NombreDeUsuario"`
+		
+        `git config --global user.mail "SuCorreoPersonal"`
+        
+	Cabe destacar que dentro de las comillas de "NombreDeUsuario" deben reemplazarlo por el nombre de usuario de su GitHub o más bien por su nombre y apellido personal, y que dentro de las comillas de "SuCorreoPersonal" deben reemplazarlo por un correo electrónico existente que usen actualmente, preferentemente el que usen de acceso a GitHub y recomendable que no sea el correo institucional de alumno, salvo que se aclare lo contrario.
+	**NOTA: Si estás realizando este paso en una computadora que no es suya sino compartida o pública, coloca el mismo tipeo de arriba sin** `--global`. Exactamente así:
+        
+		`git config user.name "NombreDeUsuario"`
+        
+		`git config user.mail "SuCorreoPersonal"`
+    
+	**Ejemplo de aclaración**:
+        
+		`git config --global user.name "EstebanSanzo"`
+        
+		`git config --global user.mail "estebansanzo@hotmail.com"`
+        
+ 5. Cada alumno debe **clonar el repositorio** del Trabajo Grupal: debes entrar al repositorio en el GitHub, presionar en el botón verde que dice **<> Code** y allí dentro de la pestaña Local verás el apartado llamado **Clone**, el cuál tendrás que copiar al portapapeles el link que aparece en opción HTTPS. Luego, elegirás o crearás una carpeta de tu computadora personal, abrirás esta carpeta, darás click al botón derecho del mouse y presionarás del menú la opción **Open Git Bash Here** para abrir Git Bash y configurar esa carpeta en específico. Si lograste hacer esto, salteate el punto 6 y continuá en el punto 7.
+ 
+ 6. Si querés trabajar en la misma Git Bash sin reiniciar la terminal, tendrás que entrar a la carpeta que hayas creado, copiarás la ruta de dirección de esa carpeta en sí (como ejemplo, si eliges la carpeta "YoPracticoGit" colocada en la carpeta Escritorio, tu link se vería algo así: `C:\Users\NOMBREDELACOMPU\Desktop\YoPracticoGit` (en cada dispositivo, el NOMBREDELACOMPU será distinto en el link de carpeta local. Luego, en el Git Bash escribirás `cd` y pegarás el link que copiaste inmediatamente despues de haber escrito `cd`, apretar un espacio, hacer click derecho y seleccionar "Pegar". A continuación presiona ENTER.
+ 7. En la terminal del Git Bash,  habiendo hecho los pasos anteriores, escribirás el siguiente comando:
+
+		`git init`
+        
+ 8. Posterior a esto, escribirás: 
+ 
+		`git clone URLCOPIADA`
+        
+	   En el caso de Nicolas Benialgo, por ejemplo, le aparecerá el link de esta forma:
+        
+		`git clone https://github.com/NicoBenialgo/TrabajoGrupal-Lenguajes1-UNAHUR.git`
+        
+	A continuación, presioná ENTER para que todo el contenido del repositorio de GitHub se guarde en tu computadora personal. Desde este momento, tendrás una copia exacta del repositorio de GitHub en tu computadora, e incluso desde ahí mismo podrás realizar ediciones para luego subirlos a GitHub mediante Git.
