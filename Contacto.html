@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contacte a la Ciudad Ficticia</title>
+        <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsive en móviles -->
+        <title>Contacte a la Ciudad Ficticia</title> <!-- Título de la pestaña / SEO -->
+        <link rel="stylesheet" href="css/estilos.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Si se agregarán más fuentes desde Google Fonts, borrar y reunir todas las fuentes seleccionadas en 1 solo paquete antes de "get embed code" -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- La fuente será Cinzel para títulos H1 y H2, mientras que Open Sans será para todo el contenido restante. -->
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     </head>
-    <header>
+    <body>
+        <header>
             <figure>
-                <img src="LogoCiudadFicticia.jpeg" alt="Logo de la Ciudad Ficticia a promocionar" width="200" height="109"> <!-- SI HAY LOGO, VEREMOS SI SE PUEDE TRANSPARENTE CON FORMATO .png
-                <figcaption>Logo de la Ciudad Ficticia</figcaption> Para este caso en particular no necesitaremos el figcaption en el logo de la portada-->
+                <img src="img/grupal-logo.png" alt="Logo de la Ciudad Naboo a promocionar" width="100" height="100">
             </figure>
-            <h1>Contactos de la Ciudad Ficticia</h1>
+            <h1>Descubre Ciudad Naboo</h1>
+            <h2>Todo lo que quieras saber sobre este poblado encantador en un solo lugar.</h2>
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="Ciudad Naboo 1.html">Sobre la ciudad</a></li>
+                    <li><a href="ciudad.html">Sobre la ciudad</a></li>
                     <li><a href="lugares.html">Sitios a visitar</a></li>
                 </ul>
             </nav>
@@ -45,22 +50,22 @@
             </section>
             <section id="formulario">
                 <h2>Dejanos tus datos</h2>
-                <form>
-                    <p>
+                <form action="registrar_formulario.php" method="POST">
+                    <div>
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" required>
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         <label for="mensaje">Mensaje:</label>
                         <textarea id="mensaje" name="mensaje" rows="4"></textarea>
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         <button type="submit">Enviar</button>
-                    </p>
+                    </div>
                 </form>
             </section>
             <section id="horarios">
@@ -74,21 +79,22 @@
             </section>
         </main>
         <footer>
-            <section id="redes">
+            <section id="redes-sociales">
                 <h3>Seguinos</h3>
                 <ul>
-                    <li><a href= "https://www.instagram.com/ciudadficticia" target="blank" rel="noopener">Instagram</a></li>
-                    <li><a href= "https://www.facebook.com/ciudadficticia" target="blank" rel="noopener">Facebook</a></li>
-                    <li><a href= "https://www.tiktok.com/ciudadficticia" target="blank" rel="noopener">Tiktok</a></li>
+                    <li><a href="https://www.instagram.com/ciudadficticia" target="blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/ciudadficticia" target="blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://www.tiktok.com/ciudadficticia" target="blank" rel="noopener">Tiktok</a></li>
                 </ul>
             </section>
             <address>
-                <p>Sede principal: Av. Calle Falsa 123, Ciudad Ficticia, Provincia de Buenos Aires, Argentina.</p>
-                <p>Sede administrativa: Av. San Cayetano 444 CP 1918, San Jorge, Provincia de Buenos Aires, Argentina.</p>
-                <p>Tel: <a href="tel:+541106261137">+54 11 0626-1137</a></p>
-                <p>Email: <a href="mailto:consultas@ciudadficticia.tur.ar">consultas@ciudadficticia.tur.ar</a></p>
+                <p>Sede principal: Palacio Real de Theed, Avenida de las Cascadas N° 73, Distrito Capital,Sector Chommell, Naboo Provincia de Argentina.</p>
+                <p>Sede administrativa: Consulado de Relaciones Exteriores y Comercio, Plaza de la Paz N°38 , Otoh Gunga, Naboo, Argentina.</p>
+                <p>Tel: <a href="tel:+541170803629">+54 11 7080-3629</a></p>
+                <p>Email: <a href="mailto:consultas@naboo.tur.ar">consultas@naboo.tur.ar</a></p>
             </address>
-            <p><small>&copy; 2026 Municipio de Ciudad Ficticia. Todos los derechos reservados.</small></p>
+            <p><small>&copy; 2026 Municipio de Naboo. (No) Todos los derechos reservados.</small></p>
+            <img src="img/grupal-logo.png" alt="Logotipo de la Ciudad" width="4rem" loading="lazy">
         </footer>
     </body>
 </html>

@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8"> <!-- Codificación de caracteres -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsive en móviles -->
-        <title>Portal de Ciudad Ficticia</title> <!-- Título de la pestaña / SEO -->
-        <link rel="stylesheet" href="estilos.css"> <!-- Próximamente se separarán las hojas de estilos en cascada en carpeta "css", al igual que las imágenes en carpeta "img".  -->
+        <title>Bienvenida a Ciudad Naboo</title> <!-- Título de la pestaña / SEO -->
+        <link rel="stylesheet" href="css/estilos.css"> 
         <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Si se agregarán más fuentes desde Google Fonts, borrar y reunir todas las fuentes seleccionadas en 1 solo paquete antes de "get embed code" -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- La fuente será Cinzel para títulos H1 y H2, mientras que Open Sans será para todo el contenido restante. -->
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -12,19 +12,20 @@
     <body>
         <header>
             <figure>
-                <img src="ciudadficticia-logo.png" alt="Logo de la Ciudad Ficticia a promocionar" width="100" height="100">
+                <img src="img/grupal-logo.png" alt="Logo de la Ciudad Naboo a promocionar" width="100" height="100">
             </figure>
-            <h1>Descubre Ciudad Ficticia</h1>
+            <h1>Descubre Ciudad Naboo</h1>
             <h2>Todo lo que quieras saber sobre este poblado encantador en un solo lugar.</h2>
             <nav>
                 <ul>
-                    <li><a href="Ciudad Naboo 1.html">Sobre la ciudad</a></li>
+                    <li><a href="ciudad.html">Sobre la ciudad</a></li>
                     <li><a href="lugares.html">Sitios a visitar</a></li>
-                    <li><a href="Contacto.html">Contactanos</a></li>
+                    <li><a href="contacto.html">Contactanos</a></li>
                 </ul>
             </nav>
         </header>
         <main>
+            <!-- Luego se agregará una portada con imagen hero bajo la etiqueta figure, llamado grupal-hero-portada.png -->
             <section id="resumen-ciudad">
                 <h2>Hay varias razones por las que quieras quedarte en este sitio.</h2>
                 <article>
@@ -40,7 +41,7 @@
                     <h3>Ciudad Naboo</h3>
                     <time datetime="2026-08-29">29 de agosto de 2026</time>
                     <p>Bajo una arquitectura histórica imponente que a su vez la rodea por una enorme varidada de flora y fauna, encontrarás dentro de esta zona una mezcla armoniosa entre las creaciones más bellas de la naturaleza y una excéntrica convivencia entre el pasado y el futuro dentro de su zona céntrica.</p>
-                    <p><strong>Encontrarás más detalles en su <a href="Ciudad_Naboo_1.html">artículo promocionable</a>.</strong></p>
+                    <p><strong>Encontrarás más detalles en su <a href="ciudad.html">artículo promocionable</a>.</strong></p>
                 </article>
             </section>
             <section id="novedades">
@@ -91,25 +92,34 @@
                     <dt>Domingos y feriados</dt>
                     <dd>Rellenado de cajeros automáticos a horas del mediodía. Hospitales cerrados. Solo guardia las 24 horas.</dd>
                 </dl>
-                <p><strong>¿Deseas conocer más? ¿Buscás contactarte con nosotros? <a href="Contacto.html">Contáctate con nosotros</a>.</strong></p>
+                <p><strong>¿Deseas conocer más? ¿Buscás contactarte con nosotros? <a href="contacto.html">Contáctate con nosotros</a>.</strong></p>
             </section>
             <aside>
                 <h3>Recordatorio para las personas que provienen de otros países</h3>
                 <!-- IMAGEN - aún no se ha asignado un uso específico a la zona dedicada a la etiqueta ASIDE -->
                 <figure>
-                    <img src="mapaconceptual-visado.jpg" alt="Recordá que debés tramitar en las aduanas del país el visado especial para acceder a las zonas ricas en recursos naturales, con la finalidad de tener un registro completo en caso de faltas a la ley de Protección Ecológica y a la ley anti Pokemon-Go." width="800" height="400" loading="lazy">
+                    <img src="img/mapaconceptual-visado.jpg" alt="Recordá que debés tramitar en las aduanas del país el visado especial para acceder a las zonas ricas en recursos naturales, con la finalidad de tener un registro completo en caso de faltas a la ley de Protección Ecológica y a la ley anti Pokemon-Go." width="800" height="400" loading="lazy">
                     <figcaption>Seguí la ruta adecuada según tu edad, motivo de viaje, estado de salud y antecedentes penales previos para obtener el visado adecuado para tí.</figcaption>
                 </figure>
             </aside>
         </main>
         <footer>
+            <section id="redes-sociales">
+                <h3>Seguinos</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/ciudadficticia" target="blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/ciudadficticia" target="blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://www.tiktok.com/ciudadficticia" target="blank" rel="noopener">Tiktok</a></li>
+                </ul>
+            </section>
             <address>
-                <p>Sede principal: Avenida Calle al 7000(-8) elevado a la raíz cúbica de 3 en hora pico, Ciudad Ficticia, Provincia de Provincia, Argentina.</p>
-                <p>Sede administrativa: Av. San Martín 1414 CP 1414, San Martín, Provincia de San Martín, Argentina.</p>
+                <p>Sede principal: Palacio Real de Theed, Avenida de las Cascadas N° 73, Distrito Capital,Sector Chommell, Naboo Provincia de Argentina.</p>
+                <p>Sede administrativa: Consulado de Relaciones Exteriores y Comercio, Plaza de la Paz N°38 , Otoh Gunga, Naboo, Argentina.</p>
                 <p>Tel: <a href="tel:+541170803629">+54 11 7080-3629</a></p>
-                <p>Email: <a href="mailto:consultas@ciudadficticia.tur.ar">consultas@ciudadficticia.tur.ar</a></p>
+                <p>Email: <a href="mailto:consultas@naboo.tur.ar">consultas@naboo.tur.ar</a></p>
             </address>
-            <p><small>&copy; 2026 Municipio de Municipio. (No) Todos los derechos reservados.</small></p>
+            <p><small>&copy; 2026 Municipio de Naboo. (No) Todos los derechos reservados.</small></p>
+            <img src="img/grupal-logo.png" alt="Logotipo de la Ciudad" width="4rem" loading="lazy">
         </footer>
     </body>
 </html>

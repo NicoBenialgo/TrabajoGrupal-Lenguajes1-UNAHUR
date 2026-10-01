@@ -1,0 +1,26 @@
+/*** Acá se definen los colores principales para su uso en el sitio web  ***/
+/*** ESTOS NO SON LOS COLORES REALES PARA EL PROYECTO, la fuente tampoco ***/
+
+:root {
+    --color-texto: #FFFFFF;
+    --color-fondo: #000000;
+    --color-primario: #333333;
+    --color-secundario: #d33d4e;
+    --fuente: "OpenSans", "Helvetica", sans-serif;
+}
+/*** Reset básico ***/
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+body {
+    font-family: var(--fuente);
+    font-size: 16px;
+	color: var(--color-texto);
+	max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+h1, h2 {
+    font-family: "Cinzel", "Cambria", "Times New Roman", serif;
+}
