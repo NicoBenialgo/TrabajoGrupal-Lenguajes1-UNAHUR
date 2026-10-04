@@ -9,10 +9,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- La fuente será Cinzel para títulos H1 y H2, mientras que Open Sans será para todo el contenido restante. -->
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body class="contacto">
         <header>
             <figure>
-                <img src="img/grupal-logo.png" alt="Logo de la Ciudad Naboo a promocionar" width="100" height="100">
+                <img src="img/LogoNaboo.png" alt="Logo de la Ciudad Naboo a promocionar" width="100" height="100">
             </figure>
             <h1>Descubre Ciudad Naboo</h1>
             <h2>Todo lo que quieras saber sobre este poblado encantador en un solo lugar.</h2>
@@ -28,73 +28,93 @@
             <section id="ubicacion">
                 <h2>¿Cómo contactarnos?</h2>
                 <article>
-                    <h3>Comunicate con la oficina de turismo de la Ciudad Ficticia por teléfono, email o redes sociales.</h3>
+                    <h3>Comunicate con la oficina de turismo de la Ciudad Naboo por teléfono, email o redes sociales.</h3>
                     <p><a href="#formulario">Ir al formulario de contacto</a></p>
                     <p><a href="https://www.googlemaps.com/maps" target="_blank" rel="noopener">Ver cómo llegar desde Google Maps</a></p>
                 </article>
+            <section id="redes">
+                <h3>Seguinos</h3>
+                <ul class="listaredes">
+                    <li><a href= "https://www.instagram.com/ciudadnaboo" target="_blank" rel="noopener">
+                        <img src="img/iglogo.png" alt="Logo de Instagram" width="50"></a>
+                        </li>
+                    <li><a href= "https://www.facebook.com/ciudadnaboo" target="_blank" rel="noopener">
+                        <img src="img/fblogo.png" alt="Logo de Facebook" width="50"></a>
+                        </li>
+                    <li><a href= "https://www.tiktok.com/@ciudadnaboo" target="_blank" rel="noopener">
+                        <img src="img/tiktoklogo.png" alt="Logo de Tiktok" width="50"></a>
+                        </li>
+                </ul>
             </section>
-            <section>
+            </section>
+            <section id="horarios">
+            <h3>HORARIOS DE ATENCIÓN</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Días</th>
+                            <th>Horarios</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lunes a Sábados</td>
+                            <td>De 08:00 a 18:00hs</td>
+                        </tr>
+                        <tr>
+                            <td>Domingos y feriados</td>
+                            <td>De 08:00 a 14:00hs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="resenas">
                 <h2>Lo que dicen nuestros clientes</h2>
                 <article>
+                    <p class="puntuacion reseña">⭐⭐⭐⭐⭐</p>
                     <p class="texto reseña">"Excelente atención, muy recomendable."</p>
-                    <h3 class="autor reseña"> Monica Cappuzzello ⭐⭐⭐⭐⭐</h3>
+                    <h3 class="autor reseña"> Monica Cappuzzello</h3>
                 </article>
                 <article>
+                    <p class="puntuacion reseña">⭐⭐⭐⭐</p>
                     <p class="texto reseña">"La ciudad tiene mucho que ofrecer, volvería sin duda"</p>
-                    <h3 class="autor reseña">Luis Antonio Cateura ⭐⭐⭐⭐</h3>
+                    <h3 class="autor reseña">Luis Antonio Cateura</h3>
                 </article>
                 <article>
+                    <p class="puntuacion reseña">⭐⭐⭐⭐⭐</p>
                     <p class="texto reseña">"Quedé enamorada de la ciudad, me quedaría a vivir!!!"</p>
-                    <h3 class="autor reseña">Sabrina Rodriguez ⭐⭐⭐⭐⭐</h3>
+                    <h3 class="autor reseña">Sabrina Rodriguez</h3>
                 </article>
             </section>
             <section id="formulario">
                 <h2>Dejanos tus datos</h2>
-                <form action="registrar_formulario.php" method="POST">
-                    <div>
+                <form>
+                    <p>
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div>
+                    </p>
+                    <p>
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
-                    </div>
-                    <div>
+                    </p>
+                    <p>
                         <label for="mensaje">Mensaje:</label>
                         <textarea id="mensaje" name="mensaje" rows="4"></textarea>
-                    </div>
-                    <div>
+                    </p>
+                    <p>
                         <button type="submit">Enviar</button>
-                    </div>
+                    </p>
                 </form>
-            </section>
-            <section id="horarios">
-            <h3>Horarios de atención</h3>
-                <dl>
-                    <dt>Lunes a sábados</dt>
-                    <dd>De 08:00 a 18:00hs.</dd>
-                    <dt>Domingos y feriados</dt>
-                    <dd>De 08:00 a 14:00hs.</dd>
-                </dl>
             </section>
         </main>
         <footer>
-            <section id="redes-sociales">
-                <h3>Seguinos</h3>
-                <ul>
-                    <li><a href="https://www.instagram.com/ciudadficticia" target="blank" rel="noopener">Instagram</a></li>
-                    <li><a href="https://www.facebook.com/ciudadficticia" target="blank" rel="noopener">Facebook</a></li>
-                    <li><a href="https://www.tiktok.com/ciudadficticia" target="blank" rel="noopener">Tiktok</a></li>
-                </ul>
-            </section>
             <address>
-                <p>Sede principal: Palacio Real de Theed, Avenida de las Cascadas N° 73, Distrito Capital,Sector Chommell, Naboo Provincia de Argentina.</p>
+                <p>Sede principal: Palacio Real de Theed, Avenida de las Cascadas N° 73, Distrito Capital,Sector Chommell, Naboo Provincia de Argentina. </p>
                 <p>Sede administrativa: Consulado de Relaciones Exteriores y Comercio, Plaza de la Paz N°38 , Otoh Gunga, Naboo, Argentina.</p>
-                <p>Tel: <a href="tel:+541170803629">+54 11 7080-3629</a></p>
-                <p>Email: <a href="mailto:consultas@naboo.tur.ar">consultas@naboo.tur.ar</a></p>
+                <p>Tel: <a href="tel:+541106261137">+54 11 0626-1137</a></p>
+                <p>Email: <a href="mailto:consultas@ciudadnaboo.tur.ar">consultas@ciudadnaboo.tur.ar</a></p>
             </address>
-            <p><small>&copy; 2026 Municipio de Naboo. (No) Todos los derechos reservados.</small></p>
-            <img src="img/grupal-logo.png" alt="Logotipo de la Ciudad" width="4rem" loading="lazy">
+            <p><small>&copy; 2026 Municipio de Naboo. Todos los derechos reservados.</small></p>
         </footer>
     </body>
 </html>
