@@ -26,39 +26,74 @@ body {
 
 }
 h1 {
-    font-family: "Cinzel" "cambria","times New Roman", serif;
-    letter-spacing: 14px;
-    text-indent: 1px;
+    
+    font-family: "Cinzel", "Cambria", "Times New Roman", serif;
+    font-size: 4rem;
+    width: 100%;             /* Ocupa todo el ancho superior */
+    text-align: center;        /* Alinea el texto a la izquierda si no querés que quede centrado */
+    margin-bottom: 0.5rem;   /* Separación con el texto de abajo */
 
 }
 
+
 h2 {
-    font-family: "Cinzel" "cambria","times New Roman", serif;
+    font-family: "Cinzel","cambria","times New Roman", serif;
     letter-spacing: 2px;
     text-indent: 50px;
-    text-align: left;
+    text-align: right;
     
 }
 h3 {
-    font-family: "Cinzel" "cambria","times New Roman", serif;
+    font-family: "Cinzel","cambria","times New Roman", serif;
     
     
 }
 
 
-/* ── Navbar fija ── */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: var(--gris-oscuro);
-    padding: 1rem 2rem;
+    padding: 0.3rem 2rem;   /* Reduce el margen superior e inferior de la barra */
     z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-indent: -2px;
+    text-indent: 2px;
+    align-items: flex-start; /* Alinea los elementos (imagen, texto, menú) hacia la parte superior */
+
+}
+.texto-header h1 {
+    font-size: 3rem;          /* Tamaño del título */
+    text-align: center;       /* O 'left' según cómo lo quieras */
+    
+    /* ── CONTROLES PARA MOVERLO A DONDE YO QUIERA ── */
+    margin-top: 0px;          /* Subir / Bajar: usá valores como 10px o -10px */
+    margin-left: 150px;         /* Izquierda / Derecha: usá valores positivos o negativos */
+    margin-bottom: 0.5rem;    /* Espacio con el párrafo de abajo */
+}
+.texto-header { /*texto debajo de "acerca de Naboo"*/
+    
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;    /*con esto cambio el texto que esta abajo de "acerca de Naboo" le cambio el tamaño de letra*/ 
+    align-items: left;     
+    width: 100%;
+    max-width: 1100px;       /* Extiende el límite del texto */
+    margin-left: 2rem;  /* Agrega un margen izquierdo para separar el texto del borde de la página */
+    margin-right: auto;      /* <--- deja el espacio libre a la derecha */ 
+    margin-bottom: 0.2rem;   /* Reduce la separación con el texto de abajo */         
+    text-align: center;      /* Opcional: para que las líneas del párrafo queden centradas */
+        
+}
+header figure img {
+    margin: 0;
+    width: 250px;            /* Aumenta el ancho de la foto (probá con 350px si querés más grande) */
+    height: auto;            /* Mantiene la proporción de la imagen para que no se deforme */
+    object-fit: cover;       /* Cubre todo el espacio sin deformar la foto */
+    border-radius: 8px;      /* Opcional: le da un pequeño borde redondeado elegante */
 }
 
 .logo {
@@ -72,12 +107,15 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
+    margin-top: 1.5rem; /* <-- con esto puedo mover la posicion del menu donde quiero*/
 }
 
 nav a {
     color: var(--blanco);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 600;        /* Le da un poco más de grosor a la letra */
+    font-size: 1rem;      /* Aumenta el tamaño del texto */
+    white-space: nowrap;     /* Evita que "Sitios a visitar" se rompa en dos líneas */
 }
 
 nav a:hover {
@@ -96,13 +134,6 @@ main {
     background-size: cover;
     background-position: center;
 }
-
-/* Alternativa si no tienen la imagen */
-/* 
-.hero {
-    background-image: linear-gradient(135deg, #0D0D0D 60%, #1A1A1A);
-}
-*/
 
 .hero::before {
     content: "";
@@ -156,37 +187,82 @@ section {
     padding: 5rem 2rem;
     max-width: 1100px;
     margin: 2rem auto;
-    align-items: center;
-    
-    
+    align-items: center; 
 
 }
 
+/* ── Ajuste para noticias con imagen a la izquierda y texto a la derecha ── */
 .info-ciudad {
     display: flex;
     flex-direction: column;
-    text-align: left;
-    justify-content: space-around;
-    align-items: left;
-    flex-direction: row;
-    
-   
+    gap: 2.5rem;
+    width: 100%;
 }
+
 .info-ciudad article {
-    padding: 100px;
-    width: 25%;
+    display: flex;
+    flex-direction: row;        /* Coloca la imagen a la izquierda y el texto a la derecha */
+    align-items: flex-start;
+    gap: 2rem;                  /* Espacio entre la foto y el texto */
+    width: 100%;                /* Usa todo el ancho del contenedor */
+    padding: 1.5rem;
     background-color: #ecdafa;
     border-radius: 20px;
-    height: auto;
-    text-align: center;
-    
-    
-    
+    text-align: left;           /* Alinea los textos a la izquierda */
 }
+
 .info-ciudad article img {
-    width: 100%;
+    width: 300px;               /* Ancho fijo de la imagen a la izquierda */
     height: 220px;
-    border-radius: 20px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;             /* Evita que la foto se encoja */
+}
+
+.info-ciudad article div {
+    flex: 1;                    /* Ocupa todo el espacio de la derecha */
+}
+
+/* ── Control de tamaño para las noticias ── */
+.noticia {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.noticia img {
+    width: 450px;        /* Controla el ancho de la foto */
+    max-width: 450px;    /* Evita que se haga gigante */
+    height: 360px;       /* Fuerza una altura pareja para todas */
+    object-fit: cover;    /* Recorta la imagen prolijamente */
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.noticia-texto {
+    flex: 1;
+    text-align: left;
+}
+
+.noticia-texto h3 {
+    font-size: 1.50rem;   /* Achica el título de la noticia */
+    line-height: 1.2;      /* Junta las líneas de texto del título */
+    margin-top: 1rem;  /* Separa un poquito del texto de arriba */
+    margin-bottom: 7rem;  /* Separa un poquito del texto de abajo */
+    font-size: 1.25rem;    /* Ajusta el tamaño de la letra */
+}
+
+.noticia-texto p {
+    font-size: 1rem;  /* Achica el texto descriptivo */
+    line-height: 1.4;
+}
+.noticia-texto time {
+    display: block;       /* Permite aplicar márgenes arriba y abajo */
+    margin-top: 1rem;     /* Separa la fecha del título */
+    margin-bottom: 1rem;  /* Separa la fecha del párrafo */
 }
 
 h2 {
@@ -205,107 +281,8 @@ h3 {
     line-height: 3
 }
 
-/* ── Grilla de planes ── */
-.planes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
 
-.plan-card {
-    position: relative;
-    background: var(--gris-oscuro);
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #333;
-}
 
-.plan-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-}
-
-.precio {
-    color: var(--naranja);
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-}
-
-.plan-card ul {
-    list-style: none;
-}
-
-.plan-card li {
-    padding: 0.4rem 0;
-    border-bottom: 1px solid #333;
-}
-
-.plan-card li::before {
-    content: "✓ ";
-    color: var(--naranja);
-}
-
-/* Badge del plan recomendado */
-.recomendado {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--naranja);
-    color: white;
-    padding: 4px 16px;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    white-space: nowrap;
-}
-
-/* ── Grid asimétrico instructores ── */
-.instructores {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 3rem;
-}
-
-.instructores img {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-    max-height: 350px;
-}
-
-.bio h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
-}
-
-.bio p {
-    margin-bottom: 0.75rem;
-    color: #CCCCCC;
-    line-height: 1.6;
-}
-
-/* ── Tabla horarios ── */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1.5rem;
-}
-
-th,
-td {
-    padding: 0.75rem 1rem;
-    text-align: left;
-    border-bottom: 1px solid #333;
-}
-
-th {
-    background: var(--gris-oscuro);
-    color: var(--naranja);
-}
 
 /* ── Footer ── */
 footer {
