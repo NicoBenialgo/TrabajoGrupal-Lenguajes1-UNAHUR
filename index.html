@@ -10,12 +10,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <figure>
-                <img src="img/grupal-logo.png" alt="Logo de la Ciudad Naboo a promocionar" width="100" height="100">
-            </figure>
-            <h1>Descubre Ciudad Naboo</h1>
-            <h2>Todo lo que quieras saber sobre este poblado encantador en un solo lugar.</h2>
+        <header id="top">
+            <a href="#top" class="logo"><img src="img/grupal-logotexto-blanco.png" alt="Logo de la Ciudad Naboo"></a>
             <nav>
                 <ul>
                     <li><a href="ciudad.html">Sobre la ciudad</a></li>
@@ -25,12 +21,18 @@
             </nav>
         </header>
         <main>
-            <!-- Luego se agregará una portada con imagen hero bajo la etiqueta figure, llamado grupal-hero-portada.png -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Descubre Ciudad Naboo</h1>
+                    <h2>Todo lo que quieras saber sobre este poblado encantador en un solo lugar.</h2>
+                    <a href="#resumen-ciudad" class="btn-hero">Conocé más</a>
+                </div>
+            </section>
             <section id="resumen-ciudad">
                 <h2>Hay varias razones por las que quieras quedarte en este sitio.</h2>
                 <article>
                     <h3>Reconocimiento mundial por ser la primer ciudad.</h3>
-                    <p>Más allá de que ésta no sea la primer ciudad, es de las que aún conservan piezas arquitectónicas de mayor antigüedad y una variedad de especies animales, florales y arbóreas en peligro de extinción que se presentan en masa a lo largo y a lo ancho de estas tierras, además de contar con el último lago de agua dulce autoabasteciente de las montañas que vienen del sudoeste, suficiente para saciar la sed de 400 millones de personas por hora.</p>
+                    <p>Más allá de que ésta no sea <mark>la primer ciudad</mark>, es de las que aún conservan piezas arquitectónicas de mayor antigüedad y una variedad de especies animales, florales y arbóreas en peligro de extinción que se presentan en masa a lo largo y a lo ancho de estas tierras, además de contar con el último lago de agua dulce autoabasteciente de las montañas que vienen del sudoeste, suficiente para saciar la sed de 400 millones de personas por hora.</p>
                 </article>
                 <article>
                     <h3>Combinación perfecta entre silencio, ruido y una mezcla de ambos.</h3>
@@ -40,16 +42,17 @@
                 <article>
                     <h3>Ciudad Naboo</h3>
                     <time datetime="2026-08-29">29 de agosto de 2026</time>
-                    <p>Bajo una arquitectura histórica imponente que a su vez la rodea por una enorme varidada de flora y fauna, encontrarás dentro de esta zona una mezcla armoniosa entre las creaciones más bellas de la naturaleza y una excéntrica convivencia entre el pasado y el futuro dentro de su zona céntrica.</p>
+                    <p>Bajo una <strong>histórica</strong> imponente que a su vez la rodea por una enorme varidada de flora y fauna, encontrarás dentro de esta zona una mezcla armoniosa entre las creaciones más bellas de la naturaleza y una excéntrica convivencia entre el pasado y el futuro dentro de su zona céntrica.</p>
                     <p><strong>Encontrarás más detalles en su <a href="ciudad.html">artículo promocionable</a>.</strong></p>
                 </article>
             </section>
+            <hr>
             <section id="novedades">
                 <h2>Últimas novedades</h2>
                 <article>
                     <h3>Ciudad ficticia expone un nuevo salón en su biblioteca municipal para investigación sobre ciudades reales.</h3>
                     <time datetime="2026-04-10">10 de abril de 2026</time>
-                    <p>Esta biblioteca recibió un presupuesto millonario de $74 millones por parte del kiosquero de la esquina para el abastecimiento del lugar que previamente fue reacondicionado por los perros que merodean la avenida Calle al 700*8.</p>
+                    <p>Esta biblioteca recibió un <em>presupuesto millonario</em> de $74 millones por parte del kiosquero de la esquina para el abastecimiento del lugar que previamente fue reacondicionado por los perros que merodean la avenida Calle al 700*8.</p>
                 </article>
                 <article>
                     <h3>Asistencia multitudinaria a evento de verano para observar el nuevo arbusto en la vereda del Ecopunto.</h3>
@@ -107,9 +110,9 @@
             <section id="redes-sociales">
                 <h3>Seguinos</h3>
                 <ul>
-                    <li><a href="https://www.instagram.com/ciudadficticia" target="blank" rel="noopener">Instagram</a></li>
-                    <li><a href="https://www.facebook.com/ciudadficticia" target="blank" rel="noopener">Facebook</a></li>
-                    <li><a href="https://www.tiktok.com/ciudadficticia" target="blank" rel="noopener">Tiktok</a></li>
+                    <li><a href="https://www.instagram.com/naboolaciudad" target="blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/naboolaciudad" target="blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://www.tiktok.com/naboolaciudad" target="blank" rel="noopener">Tiktok</a></li>
                 </ul>
             </section>
             <address>
