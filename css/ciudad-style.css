@@ -15,15 +15,14 @@
 body {
     font-family: var(--fuente);
     font-size: 15px;
-    color:var(--color-texto);
-    max-width: 1100px;
+    color: var(--color-texto);
     margin: 0 auto;
     padding: .5rem 2rem;
-    background-image: url("violeta.jpg");
-    background-size: cover; /* Ancho y alto exactos */
+    background-image: url("estatransparente.jpg");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    justify-content: center;
-
+    background-attachment: fixed; /* Mantiene la imagen estática mientras deslizas */
 }
 h1 {
     
@@ -38,9 +37,12 @@ h1 {
 
 h2 {
     font-family: "Cinzel","cambria","times New Roman", serif;
-    letter-spacing: 2px;
-    text-indent: 50px;
+    letter-spacing: 10px;
+    text-indent: 100px;
     text-align: right;
+    color:6px #6a8c6b;
+    -webkit-text-stroke: 3.5px #000000;
+    paint-order: stroke fill;
     
 }
 h3 {
@@ -233,6 +235,11 @@ section {
     margin-bottom: 2.5rem;
 }
 
+
+.noticia:nth-child(even) {
+    flex-direction: row-reverse; /* Hace que en la noticia 2 y 4 la imagen pase a la derecha */
+}
+
 .noticia img {
     width: 450px;        /* Controla el ancho de la foto */
     max-width: 450px;    /* Evita que se haga gigante */
@@ -250,7 +257,7 @@ section {
 .noticia-texto h3 {
     font-size: 1.50rem;   /* Achica el título de la noticia */
     line-height: 1.2;      /* Junta las líneas de texto del título */
-    margin-top: 1rem;  /* Separa un poquito del texto de arriba */
+    margin-top: 0.5rem;  /* Separa un poquito del texto de arriba */
     margin-bottom: 7rem;  /* Separa un poquito del texto de abajo */
     font-size: 1.25rem;    /* Ajusta el tamaño de la letra */
 }
@@ -272,19 +279,42 @@ h2 {
     margin-bottom: 2.5rem;
     color: var(--naranja);
     line-height: 3;
-    line-height: 7
+    line-height: 4;
 }
 h3 {
-    margin-bottom: 2.5rem;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
     font-size: 1.25rem;
-    line-height: 1;
-    line-height: 3
+    line-height: 6px;
+}
+
+/* Centra el bloque de Anuncio de vital importancia */
+aside {
+    width: 100%;
+    max-width: 800px;       /* Controla el ancho máximo para que no ocupe toda la pantalla */
+    margin: 3rem auto;       /* 'auto' a los lados lo centra horizontalmente */
+    text-align: center;      /* Centra el título y el contenido general */
+}
+
+/* Centra el título del anuncio */
+aside h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Alineación de la lista para que las viñetas queden prolijas */
+aside ul {
+    list-style-position: inside; /* Mantiene los puntos pegados al texto alineado */
+    display: inline-block;        /* Permite que la lista se centre respecto a su contenedor */
+    text-align: left;             /* Mantiene el texto de cada punto alineado a la izquierda */
+}
+
+aside ul li {
+    margin-bottom: 0.5rem;        /* Separación entre cada punto */
 }
 
 
 
-
-/* ── Footer ── */
 footer {
     background: var(--gris-oscuro);
     padding: 2rem;
@@ -297,5 +327,5 @@ footer a {
 }
 
 footer p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.01rem;
 }
