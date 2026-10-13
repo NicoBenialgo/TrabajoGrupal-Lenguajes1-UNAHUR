@@ -29,7 +29,7 @@ body::before {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url("img/ehh.png");
+    background-image: url("img/ImagenFondoContacto.png");
     background-size: cover; /* Ancho y alto exactos */ 
     background-repeat: no-repeat;
     background-position: center;
