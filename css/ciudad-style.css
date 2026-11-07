@@ -14,11 +14,11 @@
 
 body {
     font-family: var(--fuente);
-    font-size: 15px;
+    font-size: 16px;
     color: var(--color-texto);
     margin: 0 auto;
-    padding: .5rem 2rem;
-    background-image: url("estatransparente.jpg");
+    padding: .5em 2em;
+    background-image: url("../img/estatransparente.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,19 +36,20 @@ h1 {
 
 
 h2 {
-    font-family: "Cinzel","cambria","times New Roman", serif;
     letter-spacing: 10px;
-    text-indent: 100px;
     text-align: right;
-    color:6px #6a8c6b;
-    -webkit-text-stroke: 3.5px #000000;
-    paint-order: stroke fill;
+    color: #6a8c6b;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    line-height: 4;
     
 }
-h3 {
-    font-family: "Cinzel","cambria","times New Roman", serif;
-    
-    
+h3 {margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 6px;   
 }
 
 
@@ -125,7 +126,7 @@ nav a:hover {
 }
 
 main {
-    padding-top: 80px;
+    padding-top: 120px; /*con esto muevo la posiscion del main para que no quede tapado por el header*/
 }
 
 /* ── Hero ── */
@@ -272,21 +273,7 @@ section {
     margin-bottom: 1rem;  /* Separa la fecha del párrafo */
 }
 
-h2 {
-    font-size: 2rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 2.5rem;
-    color: var(--naranja);
-    line-height: 3;
-    line-height: 4;
-}
-h3 {
-    margin-top: 5rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.25rem;
-    line-height: 6px;
-}
+
 
 /* Centra el bloque de Anuncio de vital importancia */
 aside {
@@ -329,3 +316,4 @@ footer a {
 footer p {
     margin-bottom: 0.01rem;
 }
+
