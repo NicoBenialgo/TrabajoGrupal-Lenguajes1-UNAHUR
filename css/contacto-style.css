@@ -29,7 +29,7 @@ body::before {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url("img/ImagenFondoContacto.png");
+    background-image: url("../img/ImagenFondoContacto.png");
     background-size: cover; /* Ancho y alto exactos */ 
     background-repeat: no-repeat;
     background-position: center;
@@ -141,7 +141,7 @@ h1, h2 {
 /* ── ESPACIOS ── */
 
 body.contacto {
-    padding-top: 130px;
+    padding-top: 100px;
 }
 
 .contacto h1,
@@ -204,7 +204,7 @@ body.contacto {
 .contacto th,
 .contacto td {
     border: 1px solid var(--color-primario);
-    padding: 0.8rem 1.2rem;
+    padding: 0.8rem 1.5rem;
     background: var(--color-fondo);
 }
 
@@ -291,4 +291,109 @@ body.contacto {
 
 .btn-hero:hover {
     background: #c8b90f;
+}
+
+/* Bootstrap - personalizaciones */
+
+/* Paleta y tipografia de la ciudad aplicadas a las variables de Bootstrap */
+:root {
+    --bs-body-font-family: var(--fuente);
+    --bs-body-color: var(--color-texto);
+    --bs-body-bg: var(--color-fondo);
+}
+
+/* Navbar: mismo color que tenia el header (secundario) */
+.contacto header.navbar {
+    background-color: var(--color-secundario) !important;
+}
+
+.contacto .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Cinzel", "Cambria", "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--color-texto);
+}
+
+.contacto .navbar-brand img {
+    margin: 0;
+}
+
+.contacto .navbar-nav {
+    margin-top: 0;
+    gap: 0;
+}
+
+.contacto .navbar-nav .nav-link {
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+.contacto .navbar-nav .nav-link:hover,
+.contacto .navbar-nav .nav-link.active {
+    font-weight: 700;
+}
+
+/* Cards: borde y esquinas como las reseñas originales */
+.card {
+    --bs-card-border-color: var(--color-primario);
+    --bs-card-border-width: 2px;
+    --bs-card-border-radius: 10px;
+}
+
+/* Reseñas: ahora son cards dentro de la grilla de Bootstrap */
+.contacto #resenas {
+    display: block;
+}
+
+.contacto #resenas article {
+    max-width: none;
+    padding: 0;
+}
+
+/* La card de redes no lleva el margen que tienen las section */
+.contacto #ubicacion #redes {
+    margin: 0;
+}
+
+/* Botones */
+.btn-primary {
+    --bs-btn-color: var(--color-texto);
+    --bs-btn-bg: var(--color-primario);
+    --bs-btn-border-color: var(--color-primario);
+    --bs-btn-hover-color: var(--color-texto);
+    --bs-btn-hover-bg: var(--color-secundario);
+    --bs-btn-hover-border-color: var(--color-primario);
+    --bs-btn-active-color: var(--color-texto);
+    --bs-btn-active-bg: var(--color-secundario);
+    --bs-btn-active-border-color: var(--color-primario);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--color-texto);
+    --bs-btn-border-color: var(--color-primario);
+    --bs-btn-hover-color: var(--color-texto);
+    --bs-btn-hover-bg: var(--color-secundario);
+    --bs-btn-hover-border-color: var(--color-primario);
+    --bs-btn-active-color: var(--color-texto);
+    --bs-btn-active-bg: var(--color-secundario);
+    --bs-btn-active-border-color: var(--color-primario);
+}
+
+/* Badge de puntuacion */
+.contacto .badge.bg-warning {
+    background-color: var(--color-secundario) !important;
+}
+
+/* Formulario: foco con el color primario */
+.form-control:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--color-primario) 25%, transparent);
+}
+
+/* Tabla de horarios: franjas con el color primario */
+.contacto .table {
+    --bs-table-striped-bg: color-mix(in srgb, var(--color-primario) 20%, transparent);
 }
