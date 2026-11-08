@@ -4,111 +4,144 @@
         <meta charset="UTF-8"> <!-- Codificación de caracteres -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsive en móviles -->
         <title>Contacte a la Ciudad Ficticia</title> <!-- Título de la pestaña / SEO -->
-        <link rel="stylesheet" href="css/contacto-style.css">  
         <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Si se agregarán más fuentes desde Google Fonts, borrar y reunir todas las fuentes seleccionadas en 1 solo paquete antes de "get embed code" -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- La fuente será Cinzel para títulos H1 y H2, mientras que Open Sans será para todo el contenido restante. -->
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <!-- Bootstrap primero, para que nuestro CSS pueda sobreescribirlo -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/contacto-style.css">
     </head>
     <body class="contacto">
-        <header>
-            <figure>
-                <img src="img/LogoNaboo.png" alt="Logo de la Ciudad Naboo a promocionar" width="100" height="100">
-            </figure>
-            <h1>Descubre Ciudad Naboo</h1>
-            <h2>Todo lo que quieras saber sobre este poblado encantador en un solo lugar.</h2>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="ciudad.html">Sobre la ciudad</a></li>
-                    <li><a href="lugares.html">Sitios a visitar</a></li>
-                </ul>
-            </nav>
+        <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/Logo_naboo_Transparente.png" alt="Logo de la Ciudad Naboo a promocionar" width="50" height="50">
+                    Ciudad Naboo
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ciudad.html">Sobre la ciudad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="lugares.html">Sitios a visitar</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="Contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <main>
-            <section id="ubicacion">
-                <h2>¿Cómo contactarnos?</h2>
-                <article>
-                    <h3>Comunicate con la oficina de turismo de la Ciudad Naboo por teléfono, email o redes sociales.</h3>
-                    <p><a href="#formulario">Ir al formulario de contacto</a></p>
-                    <p><a href="https://www.googlemaps.com/maps" target="_blank" rel="noopener">Ver cómo llegar desde Google Maps</a></p>
-                </article>
-            <section id="redes">
-                <h3>Seguinos</h3>
-                <ul class="listaredes">
-                    <li><a href= "https://www.instagram.com/ciudadnaboo" target="_blank" rel="noopener">
-                        <img src="img/iglogo.png" alt="Logo de Instagram" width="50"></a>
-                        </li>
-                    <li><a href= "https://www.facebook.com/ciudadnaboo" target="_blank" rel="noopener">
-                        <img src="img/fblogo.png" alt="Logo de Facebook" width="50"></a>
-                        </li>
-                    <li><a href= "https://www.tiktok.com/@ciudadnaboo" target="_blank" rel="noopener">
-                        <img src="img/tiktoklogo.png" alt="Logo de Tiktok" width="50"></a>
-                        </li>
-                </ul>
+        <main class="container py-4">
+            <section class="text-center mb-4">
+                <h1>Descubre Ciudad Naboo</h1>
+                <h2>Todo lo que quieras saber sobre este poblado encantador en un solo lugar.</h2>
             </section>
+                <section id="ubicacion" class="mb-4">
+                    <h2>¿Cómo contactarnos?</h2>
+                <div class="row">
+                <div class="col-12 col-md-10 col-lg-8 mx-auto">
+            <article>
+                <div>
+                    <h3 class="card-title h5">Comunicate con la oficina de turismo de la Ciudad Naboo por teléfono, email o redes sociales.</h3>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <a class="btn btn-primary" href="#formulario">Ir al formulario de contacto</a>
+                        <a class="btn btn-outline-primary" href="https://www.googlemaps.com/maps" target="_blank" rel="noopener">Ver cómo llegar desde Google Maps</a>
+                    </div>
+                        <section id="redes" class="mt-3">
+                            <h4 class="h6">Seguinos</h4>
+                            <ul class="listaredes list-unstyled d-flex justify-content-center gap-3 mb-0">
+                            <li><a href="https://www.instagram.com/ciudadnaboo" target="_blank" rel="noopener">
+                                <img src="img/iglogo.png" alt="Logo de Instagram" width="50"></a></li>
+                                <li><a href="https://www.facebook.com/ciudadnaboo" target="_blank" rel="noopener">
+                                <img src="img/fblogo.png" alt="Logo de Facebook" width="50"></a></li>
+                            <li><a href="https://www.tiktok.com/@ciudadnaboo" target="_blank" rel="noopener">
+                                <img src="img/tiktoklogo.png" alt="Logo de Tiktok" width="50"></a></li>
+                        </ul>
+                        </section>
+                    </div>
+            </article>
+                </div>
+                </div>
             </section>
-            <section id="horarios">
-            <h3>HORARIOS DE ATENCIÓN</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Días</th>
-                            <th>Horarios</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Lunes a Sábados</td>
-                            <td>De 08:00 a 18:00hs</td>
-                        </tr>
-                        <tr>
-                            <td>Domingos y feriados</td>
-                            <td>De 08:00 a 14:00hs</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <section id="horarios" class="mb-4">
+                <h3>HORARIOS DE ATENCIÓN</h3>
+                <div class="row">
+                    <div class="col-12 col-md-8 col-lg-5 mx-auto">
+                        <div class="table-responsive">
+                            <table class="table table striped">
+                        <thead>
+                            <tr>
+                                <th>Días</th>
+                                <th>Horarios</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lunes a Sábados</td>
+                                <td>De 08:00 a 18:00hs</td>
+                            </tr>
+                            <tr>
+                                <td>Domingos y feriados</td>
+                                <td>De 08:00 a 14:00hs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section id="resenas">
+            <section id="resenas" class="mb-4">
                 <h2>Lo que dicen nuestros clientes</h2>
-                <article>
-                    <p class="puntuacion reseña">⭐⭐⭐⭐⭐</p>
-                    <p class="texto reseña">"Excelente atención, muy recomendable."</p>
-                    <h3 class="autor reseña"> Monica Cappuzzello</h3>
-                </article>
-                <article>
-                    <p class="puntuacion reseña">⭐⭐⭐⭐</p>
-                    <p class="texto reseña">"La ciudad tiene mucho que ofrecer, volvería sin duda"</p>
-                    <h3 class="autor reseña">Luis Antonio Cateura</h3>
-                </article>
-                <article>
-                    <p class="puntuacion reseña">⭐⭐⭐⭐⭐</p>
-                    <p class="texto reseña">"Quedé enamorada de la ciudad, me quedaría a vivir!!!"</p>
-                    <h3 class="autor reseña">Sabrina Rodriguez</h3>
-                </article>
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100">
+                            <div class="card-body">
+                                <p class="puntuacion reseña">⭐⭐⭐⭐⭐ <span class="badge bg-warning text-dark">5/5</span></p>
+                                <p class="texto reseña card-text">"Excelente atención, muy recomendable."</p>
+                                <h3 class="autor reseña card-title">Monica Cappuzzello</h3>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100">
+                            <div class="card-body">
+                                <p class="puntuacion reseña">⭐⭐⭐⭐ <span class="badge bg-warning text-dark">4/5</span></p>
+                                <p class="texto reseña card-text">"La ciudad tiene mucho que ofrecer, volvería sin duda"</p>
+                                <h3 class="autor reseña card-title">Luis Antonio Cateura</h3>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100">
+                            <div class="card-body">
+                                <p class="puntuacion reseña">⭐⭐⭐⭐⭐ <span class="badge bg-warning text-dark">5/5</span></p>
+                                <p class="texto reseña card-text">"Quedé enamorada de la ciudad, me quedaría a vivir!!!"</p>
+                                <h3 class="autor reseña card-title">Sabrina Rodriguez</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </section>
-            <section id="formulario">
+            <section id="formulario" class="mb-4">
                 <h2>Dejanos tus datos</h2>
                 <form>
-                    <p>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </p>
-                    <p>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </p>
-                    <p>
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
-                    </p>
-                    <p>
-                        <button type="submit">Enviar</button>
-                    </p>
+                    <div class="mb-3">
+                        <label class="form-label" for="nombre">Nombre:</label>
+                        <input class="form-control" type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Email:</label>
+                        <input class="form-control" type="email" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="mensaje">Mensaje:</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="4"></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Enviar</button>
                 </form>
             </section>
         </main>
-        <footer>
+        <footer class="container py-3">
             <address>
                 <p>Sede principal: Palacio Real de Theed, Avenida de las Cascadas N° 73, Distrito Capital,Sector Chommell, Naboo Provincia de Argentina. </p>
                 <p>Sede administrativa: Consulado de Relaciones Exteriores y Comercio, Plaza de la Paz N°38 , Otoh Gunga, Naboo, Argentina.</p>
@@ -117,5 +150,6 @@
             </address>
             <p><small>&copy; 2026 Municipio de Naboo. Todos los derechos reservados.</small></p>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
