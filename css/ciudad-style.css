@@ -1,8 +1,8 @@
 :root {
-    --negro: #000000;
-    --gris-oscuro: #f5f5dc;
-    --naranja: #6a8c6b;
-    --blanco: #000000;
+    --color-texto: #000000;
+    --color-fondo: #F5F5DC;
+    --color-primario: #6a8c6b;
+    --color-secundario: #c0c598;
     --fuente:"OpenSans", "Helvetica", sans-serif;
 }
 
@@ -10,6 +10,8 @@
 * {
     box-sizing: border-box;
     margin: 0; padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 body {
@@ -17,20 +19,28 @@ body {
     font-size: 16px;
     color: var(--color-texto);
     margin: 0 auto;
-    padding: .5em 2em;
+    background-color: var(--color-secundario);
+}
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-image: url("../img/estatransparente.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; /* Mantiene la imagen estática mientras deslizas */
-}
+    z-index: -1;
+}   
 h1 {
-    
     font-family: "Cinzel", "Cambria", "Times New Roman", serif;
-    font-size: 4rem;
+    font-size: 1rem;
     width: 100%;             /* Ocupa todo el ancho superior */
     text-align: center;        /* Alinea el texto a la izquierda si no querés que quede centrado */
-    margin-bottom: 0.5rem;   /* Separación con el texto de abajo */
+    margin-bottom: 1rem;   /* Separación con el texto de abajo */
 
 }
 
@@ -54,18 +64,18 @@ h3 {margin-top: 5rem;
 
 
 header {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--gris-oscuro);
+    background-color: #6a8c6b;
     padding: 0.3rem 2rem;   /* Reduce el margen superior e inferior de la barra */
-    z-index: 100;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     text-indent: 2px;
     align-items: flex-start; /* Alinea los elementos (imagen, texto, menú) hacia la parte superior */
+    z-index: 100;
 
 }
 .texto-header h1 {
@@ -93,7 +103,7 @@ header {
 }
 header figure img {
     margin: 0;
-    width: 250px;            /* Aumenta el ancho de la foto (probá con 350px si querés más grande) */
+    width: 100px;            /* Aumenta el ancho de la foto (probá con 350px si querés más grande) */
     height: auto;            /* Mantiene la proporción de la imagen para que no se deforme */
     object-fit: cover;       /* Cubre todo el espacio sin deformar la foto */
     border-radius: 8px;      /* Opcional: le da un pequeño borde redondeado elegante */
@@ -303,17 +313,16 @@ aside ul li {
 
 
 footer {
-    background: var(--gris-oscuro);
+    background: var(--color-fondo);
     padding: 2rem;
     text-align: center;
-    border-top: 2px solid var(--naranja);
-}
+    border-top: 2px solid var(--color-primario);
+    margin:0 Auto}
 
 footer a {
-    color: var(--naranja);
+    color: var(--color-primario);
 }
 
 footer p {
     margin-bottom: 0.01rem;
 }
-
