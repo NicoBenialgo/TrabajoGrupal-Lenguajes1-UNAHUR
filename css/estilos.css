@@ -1,269 +1,214 @@
 :root {
-    --blanco: #cdcdcd;
-    --negro: #232323;
-    --verde-claro: #52B07E;
-    --verde-oscuro: #1E5A50;
-    --dorado-claro: #F0D681;
-    --dorado-oscuro: #CCA44F;
-    --azul-claro: #598DA8;
+    --blanco: #fefefe; /* CTRL MAYUS L para cambiar todo a la vez */
+    --negro: #212121;
+    --verde-claro: #5aea9d;
+    --verde-oscuro: #166e5f;
+    --dorado-claro: #ebdd71;
+    --dorado-oscuro: #dfae43;
+    --azul-claro: #6fa2be;
     --azul-oscuro: #012D50;
-    --fuente-principal: "Cinzel", "Cambria", serif;
-    --fuente-secundaria: "Open Sans", "Helvetica", sans-serif;
+    --rojo-sable: #de4444;
+    --azul-sable: #4834d4;
+    --purpura: #3e2047;
+    --verde-apaleado: #6a8c6b;
+    --amarillo-apaleado: #f5f5dc;
+    --fuente-titulos: "Cinzel", "Cambria", serif;
+    --fuente-cuerpos: "Open Sans", "Helvetica", sans-serif;
 }
 /*** Reset básico ***/
 * {
     box-sizing: border-box;
     margin: 0; 
     padding: 0;
+    list-style: none; /* veamos si sirve para mejorar la navegación y las listas desordenadas */
+    text-decoration: none; /* quita desde el arranque todas las líneas de subrayado y tachado que puede tener cualquier texto */
+}
+html {
+    font-size: 16px;
 }
 body {
-    background-color: var(--azul-oscuro);
+    background-color: var(--negro);
     color: var(--blanco);
-    margin: 0;
-    min-height: 100vh;
-    background: url("img/lugar-desconocido.jpg") no-repeat center center fixed;
-    background-size: cover;
-    font-size: 16px;
-    padding: .3rem 0;
+    margin: 0 auto;
+    font-size: 1.2rem;
 }
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--azul-oscuro);
-    padding: 1rem 2rem;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header img{
-    width: 300px;
-    height: auto;
-}
-
-nav {
-    background-color: var(--azul-oscuro);
-    padding: 1rem 2rem;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 2rem;
-}
-
-nav li a {
-    text-align: center;
-    font-size: 1.25rem;
+/*  se puede usar clear: left; en los párrafos p que se queden pegados después de una imagen img
+    AÚN NO ESTÁ IMPLEMENTADO EL BOTÓN DE MODO OSCURO
+body.modo-oscuro { 
+    background-color: var(--negro);
     color: var(--blanco);
-    text-transform: uppercase;
-    text-decoration: none;
-}
-nav li a:hover {
-    color: var(--dorado-claro);
-    font-weight: bold;
-    text-decoration: underline;
-}
+} FALTAN DEFINIR ALGUNOS COLORES */
 
+/**** ETIQUETAS ESTRUCTURALES DEL HTML ****/
 section {
-    padding: 3rem 2rem;
+    padding: 10px;
+    font-style: var(--fuente-cuerpos);
 }
 
+/*** ----- ETIQUETAS GENERALES SIN CLASES ----- ***/
 h1, h2 {
-    font-family: "Cinzel", "Cambria", "Times New Roman", serif;
+    font-family: var(--fuente-titulos);
+    text-align: center;
 }
 
 h1 {
-    color: var(--blanco);
-    font-size: 50px;
-    text-align: center;
-    padding: 30px;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+/**** -------- CLASES -------- ****/
+/* CLASES DEL HEADER */
+nav #logo {
+    width: 160px;
+    padding: 0;
+}
+
+section h1#hero-encabezado {
+    margin: 0 0 34px;
+    font-size: clamp(2.8rem, 8vw, 6.2rem);
+    font-weight: 900;
+    letter-spacing: .025em;
+    line-height: .98;
+    text-wrap: balance;
+    text-shadow: 0 3px 22px rgba(0,0,0,.18);
+}
+
+/**** HERO index.html ****/
+.hero {
+    position: relative;
+    display: flex;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+.hero-video {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
-h1+h2 {
-    text-align:center;
-    font-size: 80%;
-    padding: 1%;
+.hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: rgba(0,0,0,.5);
 }
-
-.logo {
+section h1#hero-encabezado {
+    margin: 0 0 34px;
+    font-size: clamp(2.8rem, 8vw, 6.2rem);
+    font-weight: 900;
+    letter-spacing: .025em;
+    line-height: .98;
+    text-wrap: balance;
+    text-shadow: 0 3px 22px rgba(0,0,0,.18);
+}
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     color: var(--blanco);
     text-decoration: none;
-    font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: .035em;
+    line-height: 1.05;
+}
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 3.2vw, 52px);
+}
+.nav-link a {
+    border: 2px solid transparent;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: opacity .2s ease;
+}
+.nav-link a:hover {
+    opacity: .7;
+    background-color:var(--verde-oscuro);
+    border-radius: 10px;
+}
+.hero-content {
+    width: 90%;
+    max-width: 1080px;
+    padding: 100px 0 40px;
+    text-align: center;
+}
+.hero-enlaces {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
 }
 
-main {
+/**** SECTIONS ****/
+.img-mascota-section{
+    align-items: center;
+    flex-wrap: wrap;
+    width: 20em;
+}
+
+/**** FOOTER -pie de página- ****/
+footer {
+    width: 100%;
+    background-color: #180404;
+    color: var(--blanco);
+    border-top: 2px solid var(--rojo-sable);
+    margin: auto;
+}
+/* REDES SOCIALES */
+.footer-redes{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: var(--negro);
+    margin-bottom: 85px;
 }
-
-.hero {
-    position: relative;
-    height: 90vh;
-    width: 100%;
-    color: var(--blanco);
-    background-image: linear-gradient(135deg, var(--azul-oscuro) 60%, var(--azul-claro));/*
-    background-image: url("img/grupal-hero-index.png");
-    background-size: cover;
-    background-position: center;*/
+.footer-redes h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
 }
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: transparent;
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+/* SECCIÓN LEGAL */
+.footer-textofinal {
     text-align: center;
 }
-
-.hero-content h1 {
-    font-size: 4rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.footer-textofinal p {
+    font-size: 16px;
+    font-weight: italic;
+    margin-bottom: 22px;
+    line-height: 1.6;
 }
-
-.hero-content h2 {
-    font-size: 2rem;
-    margin: 1rem 0 2rem;
+/* ENLACES del footer */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 0;
 }
-
-.btn-hero {
-    display: inline-block;
-    background: var(--dorado-claro);
-    color: var(--negro);
-    padding: 0.85rem 2.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.footer-links a {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: underline;
+    padding: 0 20px;
+    border-right: 1px solid #666666;
+    transition: color 0.3s ease;
 }
-
-.btn-hero:hover {
-    background: var(--dorado-oscuro);
+.footer-links a:last-child {
+    border-right: none;
 }
-
-section {
-    margin: 5px;
-    padding: 10px;
-    font-style: "Open Sans";
+.footer-links a:hover {
+    color: var(--blanco);
 }
-
-article {
-    margin: 10px;
-    border-radius: 5px 20px;
-}
-
-body>main h2 {
-    font-size: 35px;
-}
-
-main h3 {
-    font-size: 26px;
-}
-
-body>main p {
-    font-size: 20px;
-}
-
-#resumen-ciudad, #novedades {
-    background: var(--verde-claro);
-}
-
-/**** ESTILOS ÚNICOS PARA index.html ****/
-/**** ESTE CÓDIGO SE USA SOLO EN LA PÁGINA MENCIONADA ARRIBA ****/
-/**** Reescribir las clases e IDs que sean necesarias ****/
-
-/* realizando.... */
-
-/**** ESTILOS ÚNICOS PARA lugares.html ****/
-/**** ESTE CÓDIGO SE USA SOLO EN LA PÁGINA MENCIONADA ARRIBA ****/
-#estructura-lugares {
-  width: 100vw;
-  height: 100vh;
-  background: #000;
-  overflow: hidden;
-}
-
-.general-fade {
-  position: relative;
-  width: 100%;
-  min-height: 60vh;
-  top: -25px;
-  background-image: linear-gradient(0deg, transparent, black 75%);
-  z-index: 1;
-}
-
-.lugares-starwars {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  height: 800px;
-  color: #feda4a;
-  font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 500%;
-  font-weight: 600;
-  letter-spacing: 6px;
-  line-height: 150%;
-  perspective: 400px;
-  text-align: justify;
-}
-
-.lugares-crawl {
-  position: relative;
-  top: 99999px;
-  transform-origin: 50% 100%;
-  animation: crawl 60s linear;
-}
-
-.lugares-crawl > .lugares-title {
-  font-size: 90%;
-  text-align: center;
-}
-
-.lugares-crawl > .lugares-title h3 {
-  margin: 0 0 100px;
-  text-transform: uppercase;
-}
-
-@keyframes lugares-crawl {
-  0% {
-    top: -100px;
-    transform: rotateX(20deg)  translateZ(0);
-  }
-  100% { 
-    top: -6000px;
-    transform: rotateX(25deg) translateZ(-2500px);
-  }
-}
-
-/**** ESTILOS ÚNICOS PARA ciudad.html ****/
-/**** ESTE CÓDIGO SE USA SOLO EN LA PÁGINA MENCIONADA ARRIBA ****/
-/**** Reescribir las clases e IDs que sean necesarias ****/
-
-/* realizando.... */
-
-/**** ESTILOS ÚNICOS PARA contacto.html ****/
-/**** ESTE CÓDIGO SE USA SOLO EN LA PÁGINA MENCIONADA ARRIBA ****/
-/**** Reescribir las clases e IDs que sean necesarias ****/
-
-/* realizando....*/
