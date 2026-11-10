@@ -3,6 +3,7 @@
     --color-fondo: #F5F5DC;
     --color-primario: #6a8c6b;
     --color-secundario: #c0c598;
+    --color-terciario:#2607da; 
     --fuente:"OpenSans", "Helvetica", sans-serif;
 }
 
@@ -19,7 +20,7 @@ body {
     font-size: 16px;
     color: var(--color-texto);
     margin: 0 auto;
-    background-color: var(--color-secundario);
+    background-color: var(--color-fondo);
 }
 body::before {
     content: "";
@@ -56,10 +57,11 @@ h2 {
     line-height: 4;
     
 }
-h3 {margin-top: 5rem;
+h3 {
+    margin-top: 1rem;
     margin-bottom: 1.5rem;
     font-size: 1.25rem;
-    line-height: 6px;   
+    line-height: 1.4; 
 }
 
 
@@ -69,8 +71,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #6a8c6b;
-    padding: 0.3rem 2rem;   /* Reduce el margen superior e inferior de la barra */
+    background-color: var(--color-secundario);
+    padding : 0.1rem 0rem;   /* Reduce el margen superior e inferior de la barra */
     justify-content: space-between;
     align-items: center;
     text-indent: 2px;
@@ -84,26 +86,13 @@ header {
     
     /* ── CONTROLES PARA MOVERLO A DONDE YO QUIERA ── */
     margin-top: 0px;          /* Subir / Bajar: usá valores como 10px o -10px */
-    margin-left: 150px;         /* Izquierda / Derecha: usá valores positivos o negativos */
-    margin-bottom: 0.5rem;    /* Espacio con el párrafo de abajo */
+    margin-left: 10px;         /* Izquierda / Derecha: usá valores positivos o negativos */
+
 }
-.texto-header { /*texto debajo de "acerca de Naboo"*/
-    
-    display: flex;
-    flex-direction: column;
-    font-size: 1.1rem;    /*con esto cambio el texto que esta abajo de "acerca de Naboo" le cambio el tamaño de letra*/ 
-    align-items: left;     
-    width: 100%;
-    max-width: 1100px;       /* Extiende el límite del texto */
-    margin-left: 2rem;  /* Agrega un margen izquierdo para separar el texto del borde de la página */
-    margin-right: auto;      /* <--- deja el espacio libre a la derecha */ 
-    margin-bottom: 0.2rem;   /* Reduce la separación con el texto de abajo */         
-    text-align: center;      /* Opcional: para que las líneas del párrafo queden centradas */
-        
-}
+
 header figure img {
     margin: 0;
-    width: 100px;            /* Aumenta el ancho de la foto (probá con 350px si querés más grande) */
+    width: 100px;            /* Aumenta el ancho de la foto */
     height: auto;            /* Mantiene la proporción de la imagen para que no se deforme */
     object-fit: cover;       /* Cubre todo el espacio sin deformar la foto */
     border-radius: 8px;      /* Opcional: le da un pequeño borde redondeado elegante */
@@ -116,27 +105,26 @@ header figure img {
     font-size: 1.2rem;
 }
 
-nav ul {
+nav ul {       /*ajusta la navegacion del menu hamburguesa */
     list-style: none;
     display: flex;
-    gap: 2rem;
-    margin-top: 1.5rem; /* <-- con esto puedo mover la posicion del menu donde quiero*/
+    gap: 1rem;
+    margin-top: 0.1rem; /* <-- con esto puedo mover la posicion del menu donde quiero*/
+    text-align: right;       /* Alinea el texto a la derecha */
+    padding-right: 2rem;
 }
 
-nav a {
+nav a { 
     color: var(--blanco);
     text-decoration: none;
     font-weight: 600;        /* Le da un poco más de grosor a la letra */
-    font-size: 1rem;      /* Aumenta el tamaño del texto */
+    font-size: 1.3rem !important;      /* Aumenta el tamaño del texto (inicio,sitios a visitar,contactos)*/
     white-space: nowrap;     /* Evita que "Sitios a visitar" se rompa en dos líneas */
 }
 
-nav a:hover {
-    color: var(--naranja);
-}
 
 main {
-    padding-top: 120px; /*con esto muevo la posiscion del main para que no quede tapado por el header*/
+    padding-top: 120px; /*con esto muevo la posiscion del main (naboo informa) para que no quede tapado por el header*/
 }
 
 /* ── Hero ── */
@@ -192,14 +180,13 @@ main {
     background: #C8540F;
 }
 
-/* ── Secciones generales ── */
-section {
+section {  /* bajo y subo mis titulos del h2 (Naboo Informa - Últimas novedades y Información de Transporte) seria el espacio  ── */
     display: flex;
     flex-direction: column;
     text-align: left;
-    padding: 5rem 2rem;
+    padding: 1rem 2rem;
     max-width: 1100px;
-    margin: 2rem auto;
+    margin: 1rem auto;
     align-items: center; 
 
 }
@@ -219,7 +206,7 @@ section {
     gap: 2rem;                  /* Espacio entre la foto y el texto */
     width: 100%;                /* Usa todo el ancho del contenedor */
     padding: 1.5rem;
-    background-color: #ecdafa;
+    background-color: var(--color-primario);
     border-radius: 20px;
     text-align: left;           /* Alinea los textos a la izquierda */
 }
@@ -230,6 +217,11 @@ section {
     border-radius: 12px;
     object-fit: cover;
     flex-shrink: 0;             /* Evita que la foto se encoja */
+}
+
+.info-ciudad .card, section#infociudad .card {
+    background-color: var(--color-fondo);
+    border-top: 2px solid var(--color-primario);
 }
 
 .info-ciudad article div {
@@ -265,17 +257,16 @@ section {
     text-align: left;
 }
 
-.noticia-texto h3 {
-    font-size: 1.50rem;   /* Achica el título de la noticia */
-    line-height: 1.2;      /* Junta las líneas de texto del título */
-    margin-top: 0.5rem;  /* Separa un poquito del texto de arriba */
+.noticia-texto h3 { /*esto ajusta el tamaño de los titulos (inauguracion centro tegnologia, acuedo entre naboo y gungan, etc)*/
+    line-height: 2.1rem;/* Junta las líneas de texto del título */
+    margin-top: 5rem;  /* Separa un poquito del texto de arriba */
     margin-bottom: 7rem;  /* Separa un poquito del texto de abajo */
-    font-size: 1.25rem;    /* Ajusta el tamaño de la letra */
+    font-size: 2rem;  /* Ajusta el tamaño del título */
 }
 
-.noticia-texto p {
+.noticia-texto p { /*esto ajusta lo que aparece abajo de los titulos (inauguracion centro tegnologia, acuedo entre naboo y gungan, etc)*/
     font-size: 1rem;  /* Achica el texto descriptivo */
-    line-height: 1.4;
+    line-height: 1.4rem;
 }
 .noticia-texto time {
     display: block;       /* Permite aplicar márgenes arriba y abajo */
@@ -283,44 +274,70 @@ section {
     margin-bottom: 1rem;  /* Separa la fecha del párrafo */
 }
 
+section#transporte ul, section#transporte ol { /* Mueve las listas de transporte (las viñetas) hacia la derecha o izquierda a tu gusto */
+    margin-left: 20px;     /* <--- Cambiá este número: si ponés más (ej: 40px) se corren a la derecha, si ponés 0 se pegan a la izquierda */
+    margin-bottom: 3rem;   /* Espacio de separación hacia abajo */
+}
+
+section#transporte li { /* Separa cada renglón individual de las listas para que no estén encimados */
+    margin-bottom: 0.1rem; /* <--- Aumentá o bajá entre línea y línea */
+}
+
+section#transporte dl { /* Mueve y da espacio al bloque de los horarios del sanatorio */
+    margin-left: 20px;     
+    margin-top: 2rem;
+}
+
+section#transporte dt {
+    margin-top: 1.5rem;    /* Separa los títulos de los días (Lunes a viernes, Sábados, etc.) */
+}
+
+section#transporte dd {
+    margin-bottom: 0rem; /* Separa cada renglón de los horarios entre sí */
+}
 
 
-/* Centra el bloque de Anuncio de vital importancia */
-aside {
+section#transporte h3 { /* Controla el espacio vertical de los títulos de transporte */
+    margin-top: 2rem;      
+    margin-bottom: 1.5rem; /* <--- Controla el espacio que queda entre el título y el texto de abajo. */
+    line-height: 1.4;      /* Mantiene los renglones separados para que no se encimen */
+}
+
+
+aside { /* Centra el bloque de Anuncio de vital importancia */
     width: 100%;
     max-width: 800px;       /* Controla el ancho máximo para que no ocupe toda la pantalla */
-    margin: 3rem auto;       /* 'auto' a los lados lo centra horizontalmente */
+    margin: 0.5rem auto;       /* 'auto' a los lados lo centra horizontalmente */
     text-align: center;      /* Centra el título y el contenido general */
 }
 
-/* Centra el título del anuncio */
-aside h3 {
+
+aside h3 { /* Centra el título del anuncio */
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-/* Alineación de la lista para que las viñetas queden prolijas */
-aside ul {
+
+aside ul { /* Alineación de la lista para que las viñetas queden prolijas */
     list-style-position: inside; /* Mantiene los puntos pegados al texto alineado */
     display: inline-block;        /* Permite que la lista se centre respecto a su contenedor */
     text-align: left;             /* Mantiene el texto de cada punto alineado a la izquierda */
 }
 
 aside ul li {
-    margin-bottom: 0.5rem;        /* Separación entre cada punto */
+    margin-bottom: 0.1rem;        /* Separación entre cada punto */
 }
 
-
-
 footer {
-    background: var(--color-fondo);
+    background: var(--color-secundario);
     padding: 2rem;
     text-align: center;
     border-top: 2px solid var(--color-primario);
-    margin:0 Auto}
+    margin:0 auto
+}
 
 footer a {
-    color: var(--color-primario);
+    color: var(--color-terciario); /* cambio color link*/
 }
 
 footer p {
