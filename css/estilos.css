@@ -40,9 +40,18 @@ body.modo-oscuro {
 } FALTAN DEFINIR ALGUNOS COLORES */
 
 /**** ETIQUETAS ESTRUCTURALES DEL HTML ****/
-section {
+main#sitio-index{
+    background-color: var(--verde-apaleado);
+}
+
+main#sitio-index section {
     padding: 10px;
-    font-style: var(--fuente-cuerpos);
+    font-family: var(--fuente-cuerpos);
+}
+
+main#sitio-index section div{
+    background-color: var(--blanco);
+    color: var(--negro);
 }
 
 /*** ----- ETIQUETAS GENERALES SIN CLASES ----- ***/
@@ -162,9 +171,9 @@ section h1#hero-encabezado {
 /**** FOOTER -pie de página- ****/
 footer {
     width: 100%;
-    background-color: #180404;
-    color: var(--blanco);
-    border-top: 2px solid var(--rojo-sable);
+    background-color: var(--amarillo-apaleado);
+    color: var(--negro);
+    border-top: 2px solid var(--azul-sable);
     margin: auto;
 }
 /* REDES SOCIALES */
