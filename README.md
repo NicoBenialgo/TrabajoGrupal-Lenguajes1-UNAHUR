@@ -1,5 +1,5 @@
 <p align="center">
-    <img height="256px" src="https://raw.githubusercontent.com/NicoBenialgo/TrabajoGrupal-Lenguajes1-UNAHUR/refs/heads/main/portadaTPG-Lenguajes1.png" alt="Trabajo Práctico Grupal // Lenguajes Informáticos 1 (UNAHUR)" />
+    <img height="256px" src="https://raw.githubusercontent.com/NicoBenialgo/TrabajoGrupal-Lenguajes1-UNAHUR/refs/heads/main/img/grupal-readme-portada.png" alt="Trabajo Práctico Grupal // Lenguajes Informáticos 1 (UNAHUR)" />
 </p>
 
 # Trabajo Práctico Grupal
@@ -38,6 +38,7 @@ C4 (CLASE 15)     | Clase 15   | JavaScript        | Al menos una interacción d
 
 El repositorio principal **main** debe quedar estructurada con el siguiente esquema base:
 
+```
 mi-ciudad/
 ├── index.html ← **nota**
 ├── ciudad.html
@@ -47,6 +48,7 @@ mi-ciudad/
 │ └── estilos.css ← archivo nuevo del segundo commit
 └── img/		← carpeta donde se añade todas las imágenes
 └── ...
+```
 
 **Nota:** Todos los archivos HTML deben tener un mismo '<header>', un mismo '<footer>' y una misma estructura de la etiqueta '<nav>'.
 
@@ -100,8 +102,8 @@ Segunda línea:
     git config --global user.mail "SuCorreoPersonal"
 ```
 
-	Cabe destacar que dentro de las comillas de "NombreDeUsuario" deben reemplazarlo por el nombre de usuario de su GitHub o más bien por su nombre y apellido personal, y que dentro de las comillas de "SuCorreoPersonal" deben reemplazarlo por un correo electrónico existente que usen actualmente, preferentemente el que usen de acceso a GitHub y recomendable que no sea el correo institucional de alumno, salvo que se aclare lo contrario.
-	**NOTA: Si estás realizando este paso en una computadora que no es suya sino compartida o pública, coloca el mismo tipeo de arriba sin** `--global`. Exactamente así:
+Cabe destacar que dentro de las comillas de "NombreDeUsuario" deben reemplazarlo por el nombre de usuario de su GitHub o más bien por su nombre y apellido personal, y que dentro de las comillas de "SuCorreoPersonal" deben reemplazarlo por un correo electrónico existente que usen actualmente, preferentemente el que usen de acceso a GitHub y recomendable que no sea el correo institucional de alumno, salvo que se aclare lo contrario.
+**NOTA: Si estás realizando este paso en una computadora que no es suya sino compartida o pública, coloca el mismo tipeo de arriba sin** `--global`. Exactamente así:
 
 Primer línea:
 

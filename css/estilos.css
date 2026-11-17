@@ -1,26 +1,223 @@
-/*** Acá se definen los colores principales para su uso en el sitio web  ***/
-/*** ESTOS NO SON LOS COLORES REALES PARA EL PROYECTO, la fuente tampoco ***/
-
 :root {
-    --color-texto: #FFFFFF;
-    --color-fondo: #000000;
-    --color-primario: #333333;
-    --color-secundario: #d33d4e;
-    --fuente: "OpenSans", "Helvetica", sans-serif;
+    --blanco: #fefefe; /* CTRL MAYUS L para cambiar todo a la vez */
+    --negro: #212121;
+    --verde-claro: #5aea9d;
+    --verde-oscuro: #166e5f;
+    --dorado-claro: #ebdd71;
+    --dorado-oscuro: #dfae43;
+    --azul-claro: #6fa2be;
+    --azul-oscuro: #012D50;
+    --rojo-sable: #de4444;
+    --azul-sable: #4834d4;
+    --purpura: #3e2047;
+    --verde-apaleado: #6a8c6b;
+    --amarillo-apaleado: #f5f5dc;
+    --fuente-titulos: "Cinzel", "Cambria", serif;
+    --fuente-cuerpos: "Open Sans", "Helvetica", sans-serif;
 }
 /*** Reset básico ***/
 * {
     box-sizing: border-box;
-    margin: 0; padding: 0;
+    margin: 0; 
+    padding: 0;
+    list-style: none; /* veamos si sirve para mejorar la navegación y las listas desordenadas */
+    text-decoration: none; /* quita desde el arranque todas las líneas de subrayado y tachado que puede tener cualquier texto */
+}
+html {
+    font-size: 16px;
 }
 body {
-    font-family: var(--fuente);
-    font-size: 16px;
-	color: var(--color-texto);
-	max-width: 1100px;
+    background-color: var(--negro);
+    color: var(--blanco);
     margin: 0 auto;
-    padding: 0 1rem;
+    font-size: 1.2rem;
 }
+/*  se puede usar clear: left; en los párrafos p que se queden pegados después de una imagen img
+    AÚN NO ESTÁ IMPLEMENTADO EL BOTÓN DE MODO OSCURO
+body.modo-oscuro { 
+    background-color: var(--negro);
+    color: var(--blanco);
+} FALTAN DEFINIR ALGUNOS COLORES */
+
+/**** ETIQUETAS ESTRUCTURALES DEL HTML ****/
+main#sitio-index{
+    background-color: var(--verde-apaleado);
+}
+
+main#sitio-index section {
+    padding: 10px;
+    font-family: var(--fuente-cuerpos);
+}
+
+main#sitio-index section div{
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+/*** ----- ETIQUETAS GENERALES SIN CLASES ----- ***/
 h1, h2 {
-    font-family: "Cinzel", "Cambria", "Times New Roman", serif;
+    font-family: var(--fuente-titulos);
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+/**** -------- CLASES -------- ****/
+/* CLASES DEL HEADER */
+nav #logo {
+    width: 160px;
+    padding: 0;
+}
+
+section h1#hero-encabezado {
+    margin: 0 0 34px;
+    font-size: clamp(2.8rem, 8vw, 6.2rem);
+    font-weight: 900;
+    letter-spacing: .025em;
+    line-height: .98;
+    text-wrap: balance;
+    text-shadow: 0 3px 22px rgba(0,0,0,.18);
+}
+
+/**** HERO index.html ****/
+.hero {
+    position: relative;
+    display: flex;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+.hero-video {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+}
+section h1#hero-encabezado {
+    margin: 0 0 34px;
+    font-size: clamp(2.8rem, 8vw, 6.2rem);
+    font-weight: 900;
+    letter-spacing: .025em;
+    line-height: .98;
+    text-wrap: balance;
+    text-shadow: 0 3px 22px rgba(0,0,0,.18);
+}
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: .035em;
+    line-height: 1.05;
+}
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 3.2vw, 52px);
+}
+.nav-link a {
+    border: 2px solid transparent;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: opacity .2s ease;
+}
+.nav-link a:hover {
+    opacity: .7;
+    background-color:var(--verde-oscuro);
+    border-radius: 10px;
+}
+.hero-content {
+    width: 90%;
+    max-width: 1080px;
+    padding: 100px 0 40px;
+    text-align: center;
+}
+.hero-enlaces {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/**** SECTIONS ****/
+.img-mascota-section{
+    align-items: center;
+    flex-wrap: wrap;
+    width: 20em;
+}
+
+/**** FOOTER -pie de página- ****/
+footer {
+    width: 100%;
+    background-color: var(--amarillo-apaleado);
+    color: var(--negro);
+    border-top: 2px solid var(--azul-sable);
+    margin: auto;
+}
+/* REDES SOCIALES */
+.footer-redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 85px;
+}
+.footer-redes h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+/* SECCIÓN LEGAL */
+.footer-textofinal {
+    text-align: center;
+}
+.footer-textofinal p {
+    font-size: 16px;
+    font-weight: italic;
+    margin-bottom: 22px;
+    line-height: 1.6;
+}
+/* ENLACES del footer */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 0;
+}
+.footer-links a {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: underline;
+    padding: 0 20px;
+    border-right: 1px solid #666666;
+    transition: color 0.3s ease;
+}
+.footer-links a:last-child {
+    border-right: none;
+}
+.footer-links a:hover {
+    color: var(--blanco);
 }
