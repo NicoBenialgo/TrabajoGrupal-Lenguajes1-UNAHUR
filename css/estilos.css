@@ -23,15 +23,20 @@
     list-style: none; /* veamos si sirve para mejorar la navegación y las listas desordenadas */
     text-decoration: none; /* quita desde el arranque todas las líneas de subrayado y tachado que puede tener cualquier texto */
 }
-html {
-    font-size: 16px;
-}
+
 body {
     background-color: var(--negro);
     color: var(--blanco);
     margin: 0 auto;
-    font-size: 1.2rem;
+    font-size: 16px;
+    cursor: url("cursor-azul-sable.gif") 0 0, auto; /* Puntero del mouse en cualquier situación, 0 0 define la esquina top 0 left 0 como forma de clickear */
 }
+a,
+button,
+.cursor-pointer {
+  cursor: url("cursor-rojo-sable.gif") 0 0, pointer; /* cuando apunte a algún enlace, algún botón o algo con la clase "cursor-pointer" */
+}
+
 /*  se puede usar clear: left; en los párrafos p que se queden pegados después de una imagen img
     AÚN NO ESTÁ IMPLEMENTADO EL BOTÓN DE MODO OSCURO
 body.modo-oscuro { 
@@ -68,56 +73,10 @@ h2 {
     font-size: 2.6rem;
 }
 
-/**** -------- CLASES -------- ****/
-/* CLASES DEL HEADER */
+/**** -------- HEADER Y NAV -------- ****/
 nav #logo {
     width: 160px;
     padding: 0;
-}
-
-section h1#hero-encabezado {
-    margin: 0 0 34px;
-    font-size: clamp(2.8rem, 8vw, 6.2rem);
-    font-weight: 900;
-    letter-spacing: .025em;
-    line-height: .98;
-    text-wrap: balance;
-    text-shadow: 0 3px 22px rgba(0,0,0,.18);
-}
-
-/**** HERO index.html ****/
-.hero {
-    position: relative;
-    display: flex;
-    min-height: 90vh;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    isolation: isolate;
-}
-.hero-video {
-    position: absolute;
-    z-index: -2;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.hero::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background: rgba(0,0,0,.5);
-}
-section h1#hero-encabezado {
-    margin: 0 0 34px;
-    font-size: clamp(2.8rem, 8vw, 6.2rem);
-    font-weight: 900;
-    letter-spacing: .025em;
-    line-height: .98;
-    text-wrap: balance;
-    text-shadow: 0 3px 22px rgba(0,0,0,.18);
 }
 .navbar-brand {
     display: inline-flex;
@@ -148,6 +107,42 @@ section h1#hero-encabezado {
     background-color:var(--verde-oscuro);
     border-radius: 10px;
 }
+
+/**** -------- CLASES -------- ****/
+/**** HERO index.html ****/
+section h1#hero-encabezado {
+    margin: 0 0 34px;
+    font-size: clamp(2.8rem, 8vw, 6.2rem);
+    font-weight: 900;
+    letter-spacing: .025em;
+    line-height: .98;
+    text-wrap: balance;
+    text-shadow: 0 3px 22px rgba(0,0,0,.18);
+}
+.hero {
+    position: relative;
+    display: flex;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+}
+.hero-video {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .hero-content {
     width: 90%;
     max-width: 1080px;
@@ -161,28 +156,30 @@ section h1#hero-encabezado {
     gap: 14px;
 }
 
-/**** SECTIONS ****/
+/**** SECTION y ASIDE ****/
 .img-mascota-section{
     align-items: center;
     flex-wrap: wrap;
     width: 20em;
 }
-
+aside {
+    position: relative;
+}
 aside .aviso {
   width: 3rem;
   height: 14vh;
-  background-color:;
+  background-color:rgb(32,32,32,.5);
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 15px;
+  right: 15px;
 }
 
 /**** FOOTER -pie de página- ****/
 footer {
     width: 100%;
-    background-color: var(--amarillo-apaleado);
-    color: var(--negro);
-    border-top: 2px solid var(--azul-sable);
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    border-top: 1px solid var(--azul-sable);
     margin: auto;
 }
 /* REDES SOCIALES */
@@ -202,9 +199,9 @@ footer {
     text-align: center;
 }
 .footer-textofinal p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: italic;
-    margin-bottom: 22px;
+    padding-bottom: 22px;
     line-height: 1.6;
 }
 /* ENLACES del footer */
@@ -216,17 +213,16 @@ footer {
     gap: 12px 0;
 }
 .footer-links a {
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 600;
+    color: var(--azul-claro);
+    font-size: 0.8rem;
+    font-weight: bold;
     text-decoration: underline;
     padding: 0 20px;
-    border-right: 1px solid #666666;
-    transition: color 0.3s ease;
+    border-right: 1px solid var(--azul-sable);
 }
 .footer-links a:last-child {
     border-right: none;
 }
 .footer-links a:hover {
-    color: var(--blanco);
+    color: var(--rojo-sable);
 }
