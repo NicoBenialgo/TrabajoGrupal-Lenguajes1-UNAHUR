@@ -168,6 +168,15 @@ section h1#hero-encabezado {
     width: 20em;
 }
 
+aside .aviso {
+  width: 3rem;
+  height: 14vh;
+  background-color:;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 /**** FOOTER -pie de página- ****/
 footer {
     width: 100%;
