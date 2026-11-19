@@ -32,17 +32,17 @@ Estos alumnos han iniciado la coformación del **GRUPO 7 de la Comisión 9** de 
 
 ## Estructura de archivos
 
-El repositorio principal **main** debe quedar estructurada con el siguiente esquema base:
+El repositorio principal **main** actualmente se encuentra estructurado con el siguiente esquema base:
 
 ```
 mi-ciudad/
-├── index.html ← **página inicial desde donde arranca el deployment de GitHub**
+├── index.html 			← **página inicial desde donde arranca el deployment de GitHub**
 ├── ciudad.html
 ├── lugares.html
 ├── contacto.html
-├── css/		← carpeta donde se añade archivos css
-│ └── estilos.css ← archivo nuevo del segundo commit (enlaza a index.html y a lugares.html)
-│ └── ciudad-style.css ← archivo nuevo del segundo commit (enlaza a ciudad.html)
+├── css/				← carpeta donde se añade archivos css
+│ └── estilos.css 		← archivo nuevo del segundo commit (enlaza a index.html y a lugares.html)
+│ └── ciudad-style.css 	← archivo nuevo del segundo commit (enlaza a ciudad.html)
 │ └── contacto-style.css ← archivo nuevo del segundo commit (enlaza a contacto.html)
 └── img/		← carpeta donde se añade todas las imágenes
 └── js/			← carpeta donde se añade los scripts de JavaScript
