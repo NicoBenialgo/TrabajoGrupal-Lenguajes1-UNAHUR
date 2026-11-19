@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="light">
     <head>
         <meta charset="UTF-8"> <!-- Codificación de caracteres -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsive en móviles -->
@@ -37,7 +37,7 @@
                             <a class="nav-link" href="lugares.html">Lugares a visitar</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Cómo llegar</a>
+                        <a class="nav-link disabled" aria-disabled="true" data-toggle="tooltip" data-placement="bottom" title="Página en mantenimiento">Cómo llegar</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contacto.html">Contactanos</a>
@@ -76,7 +76,7 @@
                     </div> 
                 </div> 
             </section>
-            <section id="resumen-ciudad py-5">
+            <section id="resumen-ciudad py-10 px-20">
                 <div class="container">
                         <h2 class="text-center mb-4">Hay varias razones por las que quieras quedarte en este sitio.</h2>
                     <article>
@@ -97,7 +97,7 @@
                 </div>
             </section>
             <hr>
-            <section id="novedades" class="py-5 bg-dark">
+            <section id="novedades" class="py-10 px-20 bg-dark">
                 <div class="container">
                     <h2>Últimas novedades</h2>
                     <article>
@@ -122,13 +122,17 @@
                     </article>
                 </div>
             </section>
-            <aside>
-                <h3>Recordatorio para las personas que provienen de otros países</h3>
-                <!-- IMAGEN - aún no se ha asignado un uso específico a la zona dedicada a la etiqueta ASIDE -->
-                <figure>
-                    <img src="img/mapaconceptual-visado.jpg" alt="Recordá que debés tramitar en las aduanas del país el visado especial para acceder a las zonas ricas en recursos naturales, con la finalidad de tener un registro completo en caso de faltas a la ley de Protección Ecológica y a la ley anti Pokemon-Go." width="800" height="400" loading="lazy">
-                    <figcaption>Seguí la ruta adecuada según tu edad, motivo de viaje, estado de salud y antecedentes penales previos para obtener el visado adecuado para tí.</figcaption>
-                </figure>
+            <aside class="aviso">
+                <!-- la etiqueta ASIDE quedará sin imagen pero se probará un mensaje flotante cuyo botón de cerrar se incluye en el lenguaje Bootstrap -->
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>
+                        <h3></h3></strong> 
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <h3 class="alert-heading">¡No te desesperes!</h3>
+                    <p>Debido a la suspensión temporal del espacio aéreo y de los servicios de las naves espaciales, <strong>hemos inhabilitado temporalmente el acceso a la página de Cómo llegar y su canal de pasajes desde y hacia Naboo.</strong>.</p>
+                    <hr>
+                    <p class="mb-0">Si buscás incorporarte a la lista de "egresos emergentes" o requerís una repatriación hacia esta zona, favor de usar el formulario de contacto.</p>
+                </div>
             </aside>
         </main>
         <footer>
