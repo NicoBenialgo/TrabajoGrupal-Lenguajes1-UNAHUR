@@ -4,21 +4,17 @@
 
 # Trabajo Práctico Grupal
 
-El siguiente repositorio corresponde a la materia **Lenguajes Informáticos 1** del área de Tecnología e Ingeniería de la **Universidad Nacional de Hurlingham**, la cuál corresponde a poner en práctica todo el contenido visto durante el cuatrimestre. Para ello haremos un grupo con 4 personas para desarrollar un sitio web de información y promoción de una ciudad ficticia.
+El siguiente repositorio corresponde a la materia **Lenguajes Informáticos 1** del área de Tecnología e Ingeniería de la **Universidad Nacional de Hurlingham**, la cuál corresponde a poner en práctica todo el contenido visto durante el cuatrimestre. Para ello se realizó dentro de este repositorio de GitHub un sitio web de información y promoción de una ciudad ficticia, cuya maquetación estuvo inicialmente formado por un grupo de 4 personas.
 
-Cada equipo deberá crear la identidad de la ciudad, incluyendo su nombre, características principales, lugares de interés, propuestas culturales, actividades y eventos. El contenido puede ser completamente inventado, siempre que mantenga coherencia dentro del sitio.
+Cada miembro del equipo se ha repartido una porción del sitio web para manejarlo a su semejanza, siguiendo una temática de lugar conocido: **Naboo** es una de las locaciones que tiene relvancia dentro de la saga de ciencia-ficción **Star Wars**. En base a ello, el equipo ha hecho de cada porción de su página HTML un sandbox de pruebas en las que debe conocer cada una de las herramientas aprendidas en clase, combinando esto con el conocimiento que aporta cada uno acerca de la información que enriquece a la ciudad ficticia, a la armonización del contenido y los colores, y a la ordenanza de la estructura que se espera en cada lenguaje.
 
-El sitio se construirá de forma incremental a lo largo del cuatrimestre, incorporando las tecnologías que se vayan trabajando en clase: **primero se desarrollará la estructura y el contenido utilizando HTML, luego se incorporarán estilos mediante CSS**, posteriormente se mejorará el diseño y la adaptación a distintos dispositivos utilizando Bootstrap, y finalmente se agregarán funcionalidades e interacciones mediante JavaScript.
+Tal como se sigue el progreso del contenido en clase, **primero se desarrolla la estructura y el contenido de un lenguaje de marcado de hipertexto como lo es HTML**, en la que se mostrará el contenido esencial basado en el texto y las etiquetas que lo ordenan de forma lineal o en bloque. Luego de incorporarse las etiquetas esenciales del "body" en las que se incluye **main, header, nav, footer, section, article y aside**, se comienza a incorporar un diseño que modifica los colores y tamaño de las cajas y del texto de las cajas del HTML, usando declaraciones colocadas en lenguaje CSS: **otra hoja de código en la que cada porción hará hincapié en una parte del HTML mediante el uso de un selector, cambiando los valores de una propiedad o varias de sus propiedades nativas a un valor que lo haga más visible estéticamente de forma notoria**. Posteriormente se utiliza mejores herramientas para relizar sitios que respondan a distintos dispositivos y a las condiciones de accesibilidad de cada usuario que observe tal sitio web: para ello la relación entre HTML y CSS deja a un lado su impronta totalmente estática para comenzar a ser interactiva dependiendo del tamaño de cada pantalla, de la responsividad que busca el usuario lector, de reducir líneas de código y tiempo de adaptación a herramientas de código prediseñadas conocidos como **frameworks** tal como lo es Bootstrap, y a la adaptación de las cajas en bloque mediante display: flex y display: grid para mejorar la visualización. Finalmente se agregarán funcionalidades interactivas mediante hojas de JavaScript para realizar funciones más puntuales o más complejas.
 
 Cada etapa deberá construirse sobre la anterior, de manera que el proyecto evolucione progresivamente hasta obtener un sitio web completo, navegable, adaptable e interactivo. El objetivo del trabajo no es solamente obtener un sitio terminado, sino también poner en práctica el proceso de desarrollo colaborativo: organizar las tareas, distribuir el trabajo entre los integrantes, utilizar Git y GitHub para registrar los avances y aplicar progresivamente los conceptos trabajados durante la materia.
 
-# Organización del proyecto
-
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
-
 ## Alumnos que conforman el grupo
 
-El siguiente grupo de alumnos forman parte de la **Comisión 9** de la materia de **Lenguajes Informáticos 1**, cuya cursada se realiza los jueves de 18 a 22 horas.
+Estos alumnos han iniciado la coformación del **GRUPO 7 de la Comisión 9** de la materia de **Lenguajes Informáticos 1**, cuya cursada se realiza los jueves de 18 a 22 horas.
 
  - Lucas García
  - Ludmila Cabral
@@ -27,12 +23,12 @@ El siguiente grupo de alumnos forman parte de la **Comisión 9** de la materia d
 
 ## Calendario de commits obligatorios
 
-Commit  | Fecha de entrega      | Etapa             | Contenido esperado
-------: | :--------: | :---------------: | :------------------------------------------------------------------
-C1 (CLASE 5)      | 13 de septiembre    | Estructura HTML   | index.html + páginas secundarias con HTML semántico completo.
-C2 (CLASE 8)     | 4 de octubre    | Estilos CSS       | Hoja de estilos vinculada. Layout, colores y tipografía aplicados.
-C3 (CLASE 12)     | Clase 12   | Framework CSS     | Grilla responsiva y componentes de Bootstrap integrados.
-C4 (CLASE 15)     | Clase 15   | JavaScript        | Al menos una interacción dinámica funcionando en el sitio.
+| Commit | Fecha de entrega | Etapa general            | Contenido esperado                                                                       |
+|--------|------------------|--------------------------|------------------------------------------------------------------------------------------|
+| 1      | 13/09/2026       | Estructura básica HTML   | Se espera el index.html + páginas secundarias con HTML semántico completo                |
+| 2      | 04/10/2026       | Estilos CSS estático     | Hoja de estilos en cascada vinculada a los HTML. Layout, colores y tipografía aplicados. |
+| 3      | 08/11/2026       | Framework CSS dinámico   | Grilla responsiva con Flexbox o display:grid, y componentes de Bootstrap integrados.     |
+| 4      | 22/11/2026       | Funciones con JavaScript | Al menos una interacción dinámica funcionando en el sitio.                               |
 
 ## Estructura de archivos
 
@@ -40,56 +36,27 @@ El repositorio principal **main** debe quedar estructurada con el siguiente esqu
 
 ```
 mi-ciudad/
-├── index.html ← **nota**
+├── index.html ← **página inicial desde donde arranca el deployment de GitHub**
 ├── ciudad.html
 ├── lugares.html
 ├── contacto.html
 ├── css/		← carpeta donde se añade archivos css
-│ └── estilos.css ← archivo nuevo del segundo commit
+│ └── estilos.css ← archivo nuevo del segundo commit (enlaza a index.html y a lugares.html)
+│ └── ciudad-style.css ← archivo nuevo del segundo commit (enlaza a ciudad.html)
+│ └── contacto-style.css ← archivo nuevo del segundo commit (enlaza a contacto.html)
 └── img/		← carpeta donde se añade todas las imágenes
+└── js/			← carpeta donde se añade los scripts de JavaScript
+└── assets/		← carpeta donde se añade todos los archivos que no son imágenes como tal
 └── ...
 ```
 
 **Nota:** Todos los archivos HTML deben tener un mismo '<header>', un mismo '<footer>' y una misma estructura de la etiqueta '<nav>'.
 
-Por el momento, el uso del branch **beta** se realizará únicamente para hacer pruebas del manejo de Git Bash en el escritorio y sus formas de realizar cambios rápidos "de nube a local" y "de local a nube", haciendo uso del pdf "Git_ La Guía Sencilla para Principiantes".
+Por el momento, el uso del branch **beta** fue única y exclusivamente para hacer pruebas del manejo de Git Bash en el escritorio y sus formas de realizar cambios rápidos "de nube a local" y "de local a nube", haciendo uso del pdf "Git_ La Guía Sencilla para Principiantes". 
 
-## Estado actual del repositorio
+## Práctica recomendada para iniciar con el uso del sitio Git
 
-Actualmente se encuentra en preparación el **segundo commit (C2)**. Los pasos a seguir para continuar con el trabajo práctico grupal son los siguientes:
-
- 1. Crear la vinculación del `index.html` a la hoja de estilos que se creará en un nuevo archivo llamado `estilos.css` mediante la etiqueta `<link rel=stylesheet href=css/estilos.css>`. 
- 2. Subir de forma individual al repositorio el esquema básico CSS modelizado, siguiendo el ejemplo usado en la CLASE 6 para el mini-desafío de ConnectHub, declarando cuáles serán los colores principales a usar mediante variables `--var(nombre-variable)`, el cuál primero deben declararse en el desglose de código en el selector`:root` ubicado al principio de la hoja de `estilos.css`, así como la fuente general de todo el texto el cuál debe estar previamente importado en la sección `head` del `index.html`. 
- 3. Agregarle a esto el modelo de reset básico para modelizar todo el contenido html bajo el selector `* {...}` y el modelado del selector `body`, lo cuál quedaría de esta forma:
-
-```
-/*** Acá se definen los colores principales para su uso en el sitio web  ***/
-/*** ESTOS NO SON LOS COLORES REALES PARA EL PROYECTO, la fuente tampoco ***/
-:root {
-	--color-texto: #FFFFFF;
-	--color-fondo: #000000;
-	--color-primario: #333333;
-	--color-secundario: #d33d4e;
-	--fuente: "OpenSans", sans-serif;`
-}
-
-/*** Reset básico ***/
-* {
-	box-sizing: border-box;
-	margin: 0; padding: 0;
-}
-
-body {
-    font-family: var(--fuente);
-	font-size: 16px;
-	color: var(--color-texto);
-    max-width: 1100px;
-    margin: 0 auto;
-	padding: 0 1rem;
-}
-```
-
- 4. Cada uno de los integrantes debe realizar en el momento acordado en conjunto la instalación de la aplicacion GIT a su computadora personal, instalando sin realizar modificaciones a las sugerencias mostradas más allá de apretar "Siguiente" o "Next". Con GIT instalado, usar su variante llamado **Git Bash**, el cuál se abrirá una ventana negra tipo Terminal cuya primer línea dirá los nombres con los que se identifica a su PC personal. **Cada miembro del equipo tendrá que escribir las siguientes líneas de código en Git Bash** ni bien lo hayan instalado:
+Cada uno de los integrantes debe realizar en el momento acordado en conjunto la instalación de la aplicacion GIT a su computadora personal, instalando sin realizar modificaciones a las sugerencias mostradas más allá de apretar "Siguiente" o "Next". Con GIT instalado, usar su variante llamado **Git Bash**, el cuál se abrirá una ventana negra tipo Terminal cuya primer línea dirá los nombres con los que se identifica a su PC personal. **Cada miembro del equipo tendrá que escribir las siguientes líneas de código en Git Bash** ni bien lo hayan instalado:
 
 Primer línea:
 
